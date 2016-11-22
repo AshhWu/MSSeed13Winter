@@ -1,0 +1,38 @@
+@charset "UTF-8";
+body {
+  font-size: 16px;
+  font-family: 'Heiti TC', HeitiTC-Light, LiHei, 微軟正黑體, Lato, Verdana, 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  background-color: #329fa2;
+  margin: 0;
+  height: 100%;
+  width: 100%; }
+
+.header-container {
+  position: absolute;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  padding: 20px 60px; }
+  .header-container .header-title {
+    display: inline-block;
+    font-size: 30px; }
+
+.main-container {
+  margin-top: 80px;
+  position: relative;
+  height: 100%;
+  width: 100%; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; }
+  footer .footer-container {
+    text-align: center;
+    height: 60px;
+    line-height: 30px; }
+
+/*# sourceMappingURL=global.css.map */
