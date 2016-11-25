@@ -16,6 +16,9 @@ foreach ($_SERVER as $key => $value) {
     $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
+echo "user=".$connectstr_dbusername;
+echo "passwd=".$connectstr_dbpassword;
+
 $link = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname);
 
 if (!$link) {
