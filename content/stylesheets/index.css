@@ -1,3 +1,20 @@
+body {
+  margin: 0;
+  text-align: center; }
 
+.logo {
+  font-size: 36px; }
+  .logo .logo-img {
+    width: 130px;
+    height: 200px; }
+
+.form {
+  margin: 50px;
+  font-size: 26px; }
+  .form .form-text {
+    color: #329fa2; }
+  .form .form-btn {
+    margin: 10px;
+    color: #329fa2; }
 
 /*# sourceMappingURL=index.css.map */
