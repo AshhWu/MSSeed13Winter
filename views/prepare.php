@@ -36,6 +36,9 @@
     <div class="triangle"></div>
 	<div class="col-lg-12 main-container" >
         <div class="guide-title">挑戰賽<span style="color: white;">說明</span></div>
+        <div class="deer-box">
+            <img class="deer" src="../deer.png">
+        </div>
 		<div class="col-lg-5 col-lg-offset-7 guide">
             <div class="team-name">
                 <div class="moving-arrow">></div>

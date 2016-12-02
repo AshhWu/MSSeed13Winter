@@ -61,6 +61,15 @@
 	position: absolute;
 	overflow: hidden;
 }
+.deer-box {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	left: 30%;
+	.deer {
+		width:200px;
+	}
+}
 .guide-title{
 	color: #329fa2;
 	position: absolute;
