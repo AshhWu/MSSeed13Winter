@@ -1,20 +1,55 @@
+@keyframes floating {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-5px); }
+  100% {
+    transform: translateY(0px); } }
 body {
-  margin: 0;
   text-align: center; }
 
+.main-container {
+  margin-top: 0px; }
+
+.head-logo .head-logo-title {
+  padding-top: 45px;
+  font-size: 40px; }
+
 .logo {
+  position: relative;
+  margin-top: 30px;
   font-size: 36px; }
   .logo .logo-img {
+    animation: floating 3.5s infinite;
     width: 130px;
     height: 200px; }
 
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.7; }
+
 .form {
-  margin: 50px;
+  margin: 50px 0;
   font-size: 26px; }
   .form .form-text {
-    color: #329fa2; }
+    outline: 0;
+    background-color: #329fa2;
+    border: 0;
+    border-bottom: 1px solid white;
+    padding: 0 10px;
+    color: white; }
   .form .form-btn {
-    margin: 10px;
-    color: #329fa2; }
+    outline: 0;
+    padding: 0 10px;
+    background-color: white;
+    margin: 30px 0;
+    color: #329fa2;
+    position: relative;
+    bottom: 0;
+    border: none;
+    -webkit-transition: bottom .2s ease-out;
+    transition: bottom .2s ease-out; }
+    .form .form-btn:hover {
+      bottom: 5px; }
 
 /*# sourceMappingURL=index.css.map */
