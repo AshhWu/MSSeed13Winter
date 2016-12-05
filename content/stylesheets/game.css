@@ -1,3 +1,99 @@
+.main-container {
+  margin: 0;
+  padding: 0; }
 
+.map-container {
+  background-color: white;
+  height: 100vh; }
+
+.qa-container .col-lg-2 {
+  width: 80px; }
+.qa-container .timer-box {
+  margin-top: 50px;
+  text-align: center;
+  height: 82px;
+  line-height: 82px; }
+  .qa-container .timer-box #timer {
+    font-size: 36px; }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -40px; }
+
+/* -- CIRCLE -- */
+.circle {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.5); }
+
+.l-half, .r-half {
+  float: left;
+  width: 50%;
+  height: 100%;
+  overflow: hidden; }
+  .l-half:before, .r-half:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 6px solid #fff;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards; }
+
+.l-half:before {
+  border-right: none;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+  -webkit-transform-origin: center right;
+  -webkit-animation-name: l-rotate; }
+
+.r-half:before {
+  border-left: none;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+  -webkit-transform-origin: center left;
+  -webkit-animation-name: r-rotate; }
+
+/* -- TIMER -- */
+.count {
+  position: absolute;
+  width: 100%;
+  line-height: 80px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 34px;
+  font-family: Helvetica;
+  color: #fff;
+  z-index: 2;
+  -webkit-animation: fadeout 0.5s 61s 1 linear;
+  -webkit-animation-fill-mode: forwards; }
+
+@-webkit-keyframes l-rotate {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(180deg); } }
+@-webkit-keyframes r-rotate {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(180deg); } }
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.5; } }
 
 /*# sourceMappingURL=game.css.map */

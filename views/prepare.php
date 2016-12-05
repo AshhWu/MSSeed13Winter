@@ -16,6 +16,9 @@
     <script type="text/javascript">
         function waiting (){
             $('.loading-cover').css('display', 'block');
+            setTimeout(function(){
+                window.location.assign("game.html");
+            }, 2000);
         }
     </script>
 </head>

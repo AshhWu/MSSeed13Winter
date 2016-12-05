@@ -3,21 +3,66 @@
 <head>
     <title>微軟寒假分享會</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/content/stylesheets/global.css" />
-    <link rel="stylesheet" href="/content/stylesheets/game.css" />
+    <link rel="stylesheet" href="../content/stylesheets/global.css" />
+    <link rel="stylesheet" href="../content/stylesheets/game.css" />
+    <script type="text/javascript">
+    $(document).ready(function() {
+    var n = $('.count').html() - 1;
+        setInterval(function() {
+            if (n >= 0) { $('.count').html(n--); }
+            if ($('.count').html() <= 30 && $('.count').html() >= 10){
+                $('.count').css('color', '#FF7744');
+            } else if ($('.count').html() < 10){
+                $('.count').css('color', '#FF0000');
+            }
+        }, 1000);
+    });
+    var count = 60;
+    var counter = setInterval(timer, 200);
+    function timer()
+    {
+        count=count-1;
+        if (count <= 0)
+        {
+            clearInterval(counter);
+            return;
+        }
+        if (count <= 30 && count >= 10){
+            $('#timer').css('color', '#FF7744');
+        } else if (count < 10){
+            $('#timer').css('color', '#FF0000');
+        }
+        document.getElementById("timer").innerHTML = count; // watch for spelling
+    }
+    </script>
 </head>
 <body>
     <div class="header-container">
         <div class="header-title">
-            寒分大富翁
+            微。跡<img class="header-logo" src="../taiwan-1.png" hspace="10">
         </div>
-    </div><div class="main-container">
-        <h1>Game</h1>
     </div>
-    <footer></footer>
+    <div class="col-lg-12 main-container" >
+        <div class="col-lg-6 map-container">
+        </div>
+        <div class="col-lg-6 qa-container">
+            <div class="col-lg-2 col-lg-offset-10 timer-box">
+                <div class="circle center">
+                    <div class="count">60</div>
+                    <div class="l-half"></div>
+                    <div class="r-half"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer><span style="color: #329fa2;">© Microsoft Corporation.</span> Made by MSSeed 13th.</footer>
 </body>
 </html>
