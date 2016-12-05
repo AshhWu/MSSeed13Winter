@@ -9,12 +9,31 @@
 .qa-container .col-lg-2 {
   width: 80px; }
 .qa-container .timer-box {
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
   height: 82px;
   line-height: 82px; }
   .qa-container .timer-box #timer {
     font-size: 36px; }
+.qa-container .question {
+  height: 120px;
+  font-size: 25px; }
+.qa-container .answer {
+  height: 150px; }
+  .qa-container .answer .ans1, .qa-container .answer .ans2, .qa-container .answer .ans3, .qa-container .answer .ans4 {
+    outline: 0;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    width: 150px;
+    height: 100%;
+    border: solid 2px white;
+    background-color: transparent;
+    color: white;
+    transition: all 0.2s linear; }
+    .qa-container .answer .ans1:hover, .qa-container .answer .ans2:hover, .qa-container .answer .ans3:hover, .qa-container .answer .ans4:hover {
+      background-color: white;
+      color: #329fa2; }
 
 .center {
   position: absolute;
