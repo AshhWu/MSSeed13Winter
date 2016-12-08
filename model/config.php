@@ -1,35 +1,42 @@
 <?php
-	
-$connectstr_dbhost = '';
-$connectstr_dbname = '';
-$connectstr_dbusername = '';
-$connectstr_dbpassword = '';
-
-foreach ($_SERVER as $key => $value) {
-    if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
-        continue;
-    }
     
-    $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
-}
-
-echo "user=".$connectstr_dbusername;
-echo "passwd=".$connectstr_dbpassword;
-
-$link = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname);
-
-if (!$link) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
-}
-
-echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
-
-mysqli_close($link);
+    $connstr = getenv('MS_TableConnectionString');
+    function connStrToArray($conn_str){
+ 
+        // Initialize array.
+        $conn_array = array();
+ 
+        // Split conn string on semicolons. Results in array of "parts".
+        $parts = explode(";", $conn_str);
+ 
+ 
+        // Loop through array of parts. (Each part is a string.)
+        foreach($parts as $part){
+ 
+            // Separate each string on equals sign. Results in array of 2 items.
+            $temp = explode("=", $part);
+ 
+            // Make items key=>value pairs in returned array.
+            $conn_array[$temp[0]] = $temp[1];
+        }
+    
+        return $conn_array;
+    }
+    function OpenConnection()  
+    {
+        $connArr = connStrToArray(connstr);
+        try  
+        {  
+            $serverName = connArr[Data Source];  
+            $connectionOptions = array("Database"=>connArr[Initial Catalog],  
+                "Uid"=>connArr[User ID], "PWD"=>connArr[Password]);  
+            $conn = sqlsrv_connect($serverName, $connectionOptions);  
+            if($conn == false)  
+                die(FormatErrors(sqlsrv_errors()));  
+        }
+        catch(Exception $e)
+        {  
+            echo("Error!");
+        }  
+    }
 ?>
