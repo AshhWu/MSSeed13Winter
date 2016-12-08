@@ -1,8 +1,8 @@
 <?php
     
     $connstr = getenv("MS_TableConnectionString");
-    
-        echo $conn_array;
+    function connStrToArray($conn_str){
+        echo $conn_str;
         // Initialize array.
         $conn_array = array();
  
@@ -20,7 +20,11 @@
             $conn_array[$temp[0]] = $temp[1];
         }
     
-        $connArr = $conn_array;
+        return $conn_array;
+    }
+    function OpenConnection()  
+    {
+        $connArr = connStrToArray(connstr);
         try  
         {  
             $serverName = connArr[Data Source];  
@@ -29,10 +33,11 @@
             $conn = sqlsrv_connect($serverName, $connectionOptions);  
             if($conn == false)  
                 die(FormatErrors(sqlsrv_errors()));
-            echo "Success!"; 
+            
         }
         catch(Exception $e)
         {  
             echo("Error!");
         }  
+    }
 ?>
