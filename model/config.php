@@ -2,7 +2,7 @@
     
     $connstr = getenv("MS_TableConnectionString");
     function connStrToArray($conn_str){
- 
+        echo $conn_array;
         // Initialize array.
         $conn_array = array();
  
@@ -33,8 +33,7 @@
             $conn = sqlsrv_connect($serverName, $connectionOptions);  
             if($conn == false)  
                 die(FormatErrors(sqlsrv_errors()));
-            else
-                echo "Success!"; 
+            echo "Success!"; 
         }
         catch(Exception $e)
         {  
