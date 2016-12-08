@@ -1,6 +1,6 @@
 <?php
     
-    $connstr = getenv('MS_TableConnectionString');
+    $connstr = getenv("MS_TableConnectionString");
     function connStrToArray($conn_str){
  
         // Initialize array.
@@ -32,7 +32,9 @@
                 "Uid"=>connArr[User ID], "PWD"=>connArr[Password]);  
             $conn = sqlsrv_connect($serverName, $connectionOptions);  
             if($conn == false)  
-                die(FormatErrors(sqlsrv_errors()));  
+                die(FormatErrors(sqlsrv_errors()));
+            else
+                echo "Success!"; 
         }
         catch(Exception $e)
         {  
