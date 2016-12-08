@@ -1,7 +1,7 @@
 <?php
     
     $connstr = getenv("MS_TableConnectionString");
-    function connStrToArray($conn_str){
+    
         echo $conn_array;
         // Initialize array.
         $conn_array = array();
@@ -20,11 +20,7 @@
             $conn_array[$temp[0]] = $temp[1];
         }
     
-        return $conn_array;
-    }
-    function OpenConnection()  
-    {
-        $connArr = connStrToArray(connstr);
+        $connArr = $conn_array;
         try  
         {  
             $serverName = connArr[Data Source];  
@@ -39,5 +35,4 @@
         {  
             echo("Error!");
         }  
-    }
 ?>
