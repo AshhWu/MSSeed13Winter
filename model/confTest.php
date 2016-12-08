@@ -2,8 +2,8 @@
   <html>
   <body>
 <?php
-	require_once "config.php";
-	OpenConnection();
+	$connstr = getenv("MS_TableConnectionString");
+	echo $connstr;
 ?>
  </body>
   </html>
