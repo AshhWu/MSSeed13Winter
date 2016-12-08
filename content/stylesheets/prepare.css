@@ -1,3 +1,104 @@
+@keyframes footprint {
+  0% {
+    -webkit-clip-path: polygon(0 100%, 50% 100%, 50% 100%, 0% 100%);
+    clip-path: polygon(0 100%, 50% 100%, 50% 100%, 0% 100%);
+    animation-timing-function: steps(1, end); }
+  25% {
+    -webkit-clip-path: polygon(0 60%, 50% 60%, 50% 100%, 0% 100%);
+    clip-path: polygon(0 60%, 50% 60%, 50% 100%, 0% 100%);
+    animation-timing-function: steps(1, end); }
+  50% {
+    -webkit-clip-path: polygon(0 0%, 50% 0%, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0%, 50% 0%, 50% 100%, 0% 100%);
+    animation-timing-function: steps(1, end); }
+  75% {
+    -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+    animation-timing-function: steps(1, end); } }
+.loading-cover {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(1, 1, 1, 0.8); }
+  .loading-cover .loading-title {
+    text-align: center;
+    position: absolute;
+    width: 200px;
+    margin-left: -150px;
+    top: 45%;
+    left: 50%;
+    font-size: 40px; }
+  .loading-cover .footprints-box {
+    position: absolute;
+    top: 45%;
+    left: 53%; }
+    .loading-cover .footprints-box .footprints {
+      width: 50px;
+      animation: footprint 2s infinite; }
 
+.triangle {
+  margin-top: -55px;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 700px solid transparent;
+  border-top: 650px solid #fff;
+  top: 0;
+  position: absolute;
+  overflow: hidden; }
+
+.deer-box {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 30%; }
+  .deer-box .deer {
+    width: 200px; }
+
+.guide-title {
+  color: #329fa2;
+  position: absolute;
+  letter-spacing: 8px;
+  top: 20%;
+  left: 9%;
+  margin: 20px 0;
+  font-size: 80px;
+  text-align: center; }
+
+.guide {
+  text-align: center; }
+  .guide .guide-detail {
+    margin-left: 40px;
+    font-size: 25px;
+    text-align: left; }
+  .guide .team-name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: left; }
+  .guide .team-car-box {
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold; }
+    .guide .team-car-box .team-car {
+      width: 100px; }
+  .guide button {
+    font-size: 26px;
+    padding: 5px 10px;
+    background-color: white;
+    margin: 40px 0;
+    color: #329fa2;
+    position: relative;
+    bottom: 0;
+    border: none;
+    outline: 0;
+    -webkit-transition: bottom .2s ease-out;
+    transition: bottom .2s ease-out; }
+    .guide button:hover {
+      bottom: 5px; }
 
 /*# sourceMappingURL=prepare.css.map */
