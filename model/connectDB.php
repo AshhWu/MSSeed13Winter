@@ -42,7 +42,7 @@ require_once("config.php");
             function updateScore($team, $score){
                 $sql = "UPDATE Score
                         SET score = ". $score .
-                        "WHERE id = ". $team;
+                        "WHERE team = ". $team;
                 $stmt = $this->pdo->prepare($sql);
                 $stmt -> execute();
             }
