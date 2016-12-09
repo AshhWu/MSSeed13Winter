@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(isset($_POST["team"])){
+	$_SESSION["team"]=$_POST["team"];
+}
+if(!isset($_SESSION["team"])){
+	header("Location: ../index.html?state=nosession");
+	die();
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
