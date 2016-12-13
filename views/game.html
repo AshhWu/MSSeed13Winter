@@ -25,29 +25,12 @@
             }
         }, 1000);
     });
-    var count = 60;
-    var counter = setInterval(timer, 200);
-    function timer()
-    {
-        count=count-1;
-        if (count <= 0)
-        {
-            clearInterval(counter);
-            return;
-        }
-        if (count <= 30 && count >= 10){
-            $('#timer').css('color', '#FF7744');
-        } else if (count < 10){
-            $('#timer').css('color', '#FF0000');
-        }
-        document.getElementById("timer").innerHTML = count; // watch for spelling
-    }
     </script>
 </head>
 <body>
     <div class="header-container">
         <div class="header-title">
-            微。跡<img class="header-logo" src="../taiwan-1.png" hspace="10">
+            微。跡<img class="header-logo" src="../images/taiwan-1.png" hspace="10">
         </div>
     </div>
     <div class="col-lg-12 main-container" >

@@ -1,3 +1,86 @@
+.header-title {
+  color: white; }
 
+.word-container {
+  font-size: 60px; }
+  .word-container .word-box {
+    margin-top: 200px;
+    display: inline-block; }
+
+.result-container {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: white;
+  height: 440px;
+  color: #329fa2;
+  text-align: center; }
+  .result-container .result-title {
+    font-size: 36px; }
+    .result-container .result-title .result-taiwan {
+      width: 50px; }
+  .result-container .result-subtitle {
+    font-size: 28px; }
+  .result-container .result-list {
+    text-align: left;
+    font-size: 20px;
+    margin: 20px 0; }
+    .result-container .result-list .team-name {
+      height: 30px;
+      display: inline-block;
+      width: 300px;
+      border-bottom: 1px solid #329fa2; }
+    .result-container .result-list .team-score {
+      height: 30px;
+      display: inline-block;
+      width: 40px;
+      border-bottom: 1px solid #329fa2; }
+    .result-container .result-list .team-time {
+      height: 30px;
+      display: inline-block;
+      width: 80px;
+      border-bottom: 1px solid #329fa2; }
+  .result-container .result-img-box {
+    display: block;
+    margin-top: 20px;
+    position: relative; }
+    .result-container .result-img-box .result-img {
+      position: absolute;
+      left: 50%;
+      margin-left: -92px;
+      display: block;
+      margin-top: 10px; }
+  .result-container .MS-logo {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 100px; }
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=gameover.css.map */

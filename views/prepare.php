@@ -39,19 +39,19 @@ if(!isset($_SESSION["team"])){
             Waiting
         </div>
         <div class="footprints-box">
-            <img class="footprints" src="../footprints.png">
+            <img class="footprints" src="../images/footprints.png">
         </div>
     </div>
     <div class="header-container">
         <div class="header-title">
-            微。跡<img class="header-logo" src="../taiwan-1.png" hspace="10">
+            微。跡<img class="header-logo" src="../images/taiwan-1.png" hspace="10">
         </div>
     </div>
     <div class="triangle"></div>
 	<div class="col-lg-12 main-container" >
         <div class="guide-title">挑戰賽<span style="color: white;">說明</span></div>
         <div class="deer-box">
-            <img class="deer" src="../deer.png">
+            <img class="deer" src="../images/deer.png">
         </div>
 		<div class="col-lg-5 col-lg-offset-7 guide">
             <div class="team-name">
@@ -60,7 +60,7 @@ if(!isset($_SESSION["team"])){
             </div>
             <div class="team-car-box">
                 <div class="moving-arrow">></div>
-                您的車子：<img class="team-car" src="../car-1.png" hspace="10">
+                您的車子：<img class="team-car" src="../images/car-1.png" hspace="10">
             </div>
 			<div class="guide-detail">
 				1.答對題目可前進一格</br>

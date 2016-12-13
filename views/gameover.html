@@ -3,21 +3,69 @@
 <head>
     <title>微軟寒假分享會</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/content/stylesheets/global.css" />
-    <link rel="stylesheet" href="/content/stylesheets/gameover.css" />
+    <link rel="stylesheet" href="../content/stylesheets/global.css" />
+    <link rel="stylesheet" href="../content/stylesheets/gameover.css" />
+    <link rel="stylesheet" href="../content/stylesheets/animate.css" />
+    <script type="text/javascript">
+    $(function(){
+        $(".result-container").addClass("animated slideInUp");
+    });
+    $(function(){
+        $(".word").typed({
+            strings: ["TIME'S UP!","GAME OVER."],
+            typeSpeed: 100,
+            backDelay: 1500,
+            loop: true
+        });
+    });
+    </script>
+    <script src="../content/javascripts/typed.js-master/js/typed.js"></script>
 </head>
 <body>
     <div class="header-container">
         <div class="header-title">
-            寒分大富翁
+            微。跡<img class="header-logo" src="../images/taiwan.png" hspace="10">
         </div>
-    </div><div class="main-container">
-        <h1>GameOver</h1>
     </div>
-    <footer></footer>
+    <div class="col-lg-12 main-container">
+        <div class="col-lg-5 col-lg-offset-1 word-container">
+            <div class="word-box">
+                <span class="word"></span>
+            </div>
+        </div>
+        <div class="col-lg-5 result-container">
+            <div class="result-title">
+                環<img class="result-taiwan" src="../images/taiwan-1.png" hspace="10">挑戰賽
+            </div>
+            <div class="result-subtitle">
+                結賽證書
+            </div>
+            <div class="result-list">
+                <span class="list-title">隊名：</span>
+                <div class="team-name">煞氣a寒分IT組</div>
+            </div>
+            <div class="result-list">
+                <span class="list-title">得分：</span>
+                <div class="team-score">20</div>
+            </div>
+            <div class="result-list">
+                <span class="list-title">抵達時間：</span>
+                <div class="team-time">10:30</div>
+            </div>
+            <div class="result-img-box">
+                <img class="result-img" src="../images/header_logo.png">
+            </div>
+            <img class="MS-logo" src="../images/logo_MS.png">
+        </div>
+    </div>
+    <footer>© Microsoft Corporation. Made by MSSeed 13th.</footer>
 </body>
 </html>

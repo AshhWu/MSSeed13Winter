@@ -1,10 +1,10 @@
 <?php
-require_once("config.php");
+require_once ("config.php");
     class DB{
-        
+
         private $pdo;
-            
-        
+
+
         public
             function __construct()
             {
@@ -17,11 +17,11 @@ require_once("config.php");
                     die(print_r($e));
                 }
             }
-        protected 
+        protected
             function getPDO(){
                 return $this->pdo;
             }
-        
+
         public
             function getAllQuestions(){
                 $sql = "SELECT *
@@ -29,7 +29,7 @@ require_once("config.php");
                 $stmt = $this->pdo->query($sql);
                 return $stmt->fetchAll(PDO::FETCH_NUM);
             }
-        
+
         public
             function getAllScores(){
                 $sql = "SELECT *
@@ -37,7 +37,7 @@ require_once("config.php");
                 $stmt = $this->pdo->query($sql);
                 return $stmt->fetchAll(PDO::FETCH_NUM);
             }
-        
+
         public
             function updateScore($team, $score){
                 $sql = "UPDATE Score

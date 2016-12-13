@@ -1,0 +1,90 @@
+.header-title {
+    color: white;
+}
+
+.word-container {
+    font-size: 60px;
+    .word-box {
+        margin-top: 200px;
+        display: inline-block;
+    }
+}
+.result-container {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    height: 440px;
+    color: #329fa2;
+    text-align: center;
+    .result-title {
+        font-size: 36px;
+        .result-taiwan {
+            width: 50px;
+        }
+    }
+    .result-subtitle {
+        font-size: 28px;
+    }
+    .result-list {
+        text-align: left;
+        font-size: 20px;
+        margin: 20px 0;
+        .team-name {
+            height: 30px;
+            display: inline-block;
+            width: 300px;
+            border-bottom: 1px solid #329fa2;
+        }
+        .team-score {
+            height: 30px;
+            display: inline-block;
+            width: 40px;
+            border-bottom: 1px solid #329fa2;
+        }
+        .team-time {
+            height: 30px;
+            display: inline-block;
+            width: 80px;
+            border-bottom: 1px solid #329fa2;
+        }
+    }
+    .result-img-box {
+        display: block;
+        margin-top: 20px;
+        position: relative;
+        .result-img {
+            position: absolute;
+            left: 50%;
+            margin-left: -92px;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+    .MS-logo {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        width: 100px;
+    }
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
