@@ -1,0 +1,30 @@
+#talkBox{
+    color :brown;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#myCanvas{
+    background-image: url(../../images/map.jpg);
+}
+
+#container{
+    width:750px;
+    height: 700px;
+}
+
+#div1{
+    width:500px;　
+　
+    float:left;
+}
+
+#div2{
+    width:200px;
+    
+    float:right;
+}
+
+#clear{
+    clear: both;
+}

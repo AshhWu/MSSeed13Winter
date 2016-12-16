@@ -1,0 +1,9 @@
+#talkBox{
+    color :brown;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#myCanvas{
+    background-image: url(../../images/map1.jpg);
+}
