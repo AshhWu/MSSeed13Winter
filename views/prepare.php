@@ -25,12 +25,48 @@ if(!isset($_SESSION["team"])){
     <link rel="stylesheet" href="../content/stylesheets/global.css" />
     <link rel="stylesheet" href="../content/stylesheets/prepare.css" />
     <script type="text/javascript">
-        function waiting (){
+         function waiting (){
             $('.loading-cover').css('display', 'block');
-            setTimeout(function(){
-                window.location.assign("game.html");
-            }, 2000);
+			var wsServer = 'ws://127.0.0.1:8080'; 
+			var socket = new WebSocket(wsServer);
+			socket.onopen = function (evt) { onOpen(evt) }; 
+			socket.onclose = function (evt) { onClose(evt) }; 
+			socket.onmessage = function (evt) { onMessage(evt) }; 
+			socket.onerror = function (evt) { onError(evt) }; 
+            // setTimeout(function(){
+                // window.location.assign("game.html");
+            // }, 2000);
         }
+		function onOpen(evt) { 
+			console.log("连接服务器成功");
+			isConnect = true;
+		} 
+		function onClose(evt) { 
+			console.log("Disconnected"); 
+		} 
+		function onMessage(evt) {
+			var data = JSON.parse(evt.data);
+			switch (data.type) {
+				case 'text':
+					window.location.assign("game.html");
+					console.log(data.msg);
+					break;
+				case 'num' :
+					console.log(data.msg);
+					break;
+			}
+			
+			console.log('Retrieved data from server: ' + evt.data);
+		}
+		function onError(evt) { 
+			//console.log('Error occured: ' + evt.data); 
+		}
+		function sendMsg() {
+			if(isConnect){
+				ws.send($('input').value);
+				$('input').value = '';
+			}
+		}
     </script>
 </head>
 <body>
