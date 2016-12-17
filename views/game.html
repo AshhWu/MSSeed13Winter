@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
     <title>微軟寒假分享會</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
@@ -15,21 +15,8 @@
     <link rel="stylesheet" href="../content/stylesheets/game.css" />
     <script src="../content/javascripts/map.js"></script>
     <link rel="stylesheet" href="../content/stylesheets/mapStyle.css" />
-    <script type="text/javascript">
-    $(document).ready(function() {
-    var n = $('.count').html() - 1;
-        setInterval(function() {
-            if (n >= 0) { $('.count').html(n--); }
-            if ($('.count').html() <= 30 && $('.count').html() >= 10){
-                $('.count').css('color', '#FF7744');
-            } else if ($('.count').html() < 10){
-                $('.count').css('color', '#FF0000');
-            }
-        }, 1000);
-    });
-    </script>
 </head>
-<body>
+<body ng-controller="gameController" data-ng-init="getQuestions()">
     <div class="header-container">
         <div class="header-title">
             微。跡<img class="header-logo" src="../images/taiwan-1.png" hspace="10">
@@ -42,8 +29,9 @@
             </div>
             <canvas id="myCanvas" width="600" height="423" style="border:1px solid gray">
             </canvas>
-             <div>
-                <p id="talkBox" style="height:20px"></p>
+             <div id="talkBox" style="height:20px">
+                <span class="col-lg-offset-3 col-lg-6" style="font-size: 30px">Team : 老子組＝＝</span>
+                <span class="col-lg-offset-3 col-lg-6" style="font-size: 30px">Score : {{score}}</span>
             </div>
         </div>
         <div class="col-lg-6 qa-container">
@@ -55,16 +43,20 @@
                 </div>
             </div>
             <div class="col-lg-8 col-lg-offset-2">
-                <div class="question"><span style="font-size: 40px;">Q: </span>SAA駐點的時候遇到不知道怎麼回答的問題應該?</div>
+                <div class="question"><span style="font-size: 40px;">Q: </span>{{questionTitle}}</div>
                 <div class="answer">
-                    <button class="col-lg-5 ans1">想辦法轉移話題</button>
-                    <button class="col-lg-5 col-lg-offset-1 ans2">跟客人說不重要</button>
-                    <button class="col-lg-5 ans3">大概回答讓自己保有面子</button>
-                    <button class="col-lg-5 col-lg-offset-1 ans4">尋求協助或現場做查詢</button>
+                    <button class="col-lg-5 ans1" ng-click="clickNext(1)">{{A}}</button>
+                    <button class="col-lg-5 col-lg-offset-1 ans2" ng-click="clickNext(2)">{{B}}</button>
+                    <button class="col-lg-5 ans3" ng-click="clickNext(3)">{{C}}</button>
+                    <button class="col-lg-5 col-lg-offset-1 ans4" ng-click="clickNext(4)">{{D}}</button>
                 </div>
             </div>
         </div>
     </div>
     <footer><span style="color: #329fa2;">© Microsoft Corporation.</span> Made by MSSeed 13th.</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="../controller/game.js"></script>
+
 </body>
 </html>
