@@ -5,7 +5,15 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
     $scope.index = 0;
     $scope.score = 0;
     $scope.refreshIntervalId = 0;
+    //$scope.questionTitle = $scope.questions[$scope.index][1];
     console.log($scope.questionTitle);
+    //$scope.A = $scope.questions[$scope.index][2];
+    //$scope.B = $scope.questions[$scope.index][3];
+    //$scope.C = $scope.questions[$scope.index][4];
+    //$scope.D = $scope.questions[$scope.index][5];
+    //$scope.ans = $scope.questions[$scope.index][6];
+
+
 
     $scope.getQuestions = function(){
         $http.get('../model/getAllQuestions.php')
