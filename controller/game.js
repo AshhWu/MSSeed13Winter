@@ -1,43 +1,35 @@
 var app = angular.module('app', []);
 
 app.controller('gameController', ['$scope', '$http', function($scope, $http, $window){
-	$scope.questions = [];
-	$scope.index = 0;
-	$scope.score = 0;
-	$scope.refreshIntervalId = 0;
-	//$scope.questionTitle = $scope.questions[$scope.index][1];
-	console.log($scope.questionTitle);
-	//$scope.A = $scope.questions[$scope.index][2];
-	//$scope.B = $scope.questions[$scope.index][3];
-	//$scope.C = $scope.questions[$scope.index][4];
-	//$scope.D = $scope.questions[$scope.index][5];
-	//$scope.ans = $scope.questions[$scope.index][6];
+    $scope.questions = [];
+    $scope.index = 0;
+    $scope.score = 0;
+    $scope.refreshIntervalId = 0;
+    console.log($scope.questionTitle);
 
+    $scope.getQuestions = function(){
+        $http.get('../model/getAllQuestions.php')
+            .then(function(response){
+                console.log(response);
+                console.log("Get Questions Success!");
+                for(var index in response.data){
+                    $scope.questions[index] = response.data[index];
 
+                    console.log($scope.questions[index][1]);
+                }
+                $scope.questionTitle = $scope.questions[$scope.index][1];
+                $scope.A = $scope.questions[$scope.index][2];
+                $scope.B = $scope.questions[$scope.index][3];
+                $scope.C = $scope.questions[$scope.index][4];
+                $scope.D = $scope.questions[$scope.index][5];
+                $scope.ans = $scope.questions[$scope.index][6];
+                counter_60s();
+            })
+    };
 
-	$scope.getQuestions = function(){
-		$http.get('../model/getAllQuestions.php')
-			.then(function(response){
-				console.log(response);
-				console.log("Get Questions Success!");
-				for(var index in response.data){
-					$scope.questions[index] = response.data[index];
-
-					console.log($scope.questions[index][1]);
-				}
-				$scope.questionTitle = $scope.questions[$scope.index][1];
-				$scope.A = $scope.questions[$scope.index][2];
-				$scope.B = $scope.questions[$scope.index][3];
-				$scope.C = $scope.questions[$scope.index][4];
-				$scope.D = $scope.questions[$scope.index][5];
-				$scope.ans = $scope.questions[$scope.index][6];
-				counter_60s();
-			})
-	};
-
-	function counter_60s(){
-		$('.count').html(60);
-		var n = $('.count').html() - 1;
+    function counter_60s(){
+        $('.count').html(60);
+        var n = $('.count').html() - 1;
         $scope.refreshIntervalId = setInterval(function() {
             if (n >= 0) { $('.count').html(n--); }
             if ($('.count').html() <= 30 && $('.count').html() >= 10){
@@ -46,30 +38,30 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
                 $('.count').css('color', '#FF0000');
             }
         }, 1000);
-	}
+    }
 
-	$scope.clickNext = function(yourAns){
-		clearInterval($scope.refreshIntervalId);
-		if(yourAns == $scope.ans){
-			$scope.score++;
-			console.log("Hit! Answer is correct! score:%d index=%d", $scope.$score, $scope.index);
-		}
-		else{
-			if($scope.score)
-				$scope.score--;
-			console.log("Oh! Answer is wrong");
+    $scope.clickNext = function(yourAns){
+        clearInterval($scope.refreshIntervalId);
+        if(yourAns == $scope.ans){
+            $scope.score++;
+            console.log("Hit! Answer is correct! score:%d index=%d", $scope.$score, $scope.index);
+        }
+        else{
+            if($scope.score)
+                $scope.score--;
+            console.log("Oh! Answer is wrong");
 
-		}
-		$scope.index++;
-		$scope.questionTitle = $scope.questions[$scope.index][1];
-		$scope.A = $scope.questions[$scope.index][2];
-		$scope.B = $scope.questions[$scope.index][3];
-		$scope.C = $scope.questions[$scope.index][4];
-		$scope.D = $scope.questions[$scope.index][5];
-		$scope.ans = $scope.questions[$scope.index][6];
-		move($scope.score);
-		counter_60s();
-	}
+        }
+        $scope.index++;
+        $scope.questionTitle = $scope.questions[$scope.index][1];
+        $scope.A = $scope.questions[$scope.index][2];
+        $scope.B = $scope.questions[$scope.index][3];
+        $scope.C = $scope.questions[$scope.index][4];
+        $scope.D = $scope.questions[$scope.index][5];
+        $scope.ans = $scope.questions[$scope.index][6];
+        move($scope.score);
+        counter_60s();
+    }
 
 
 var c,cxt;
