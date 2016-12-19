@@ -4,5 +4,6 @@
     $request = json_decode($postdata);
     $_db = new DB();
     $_db->postTeamName($request->name);
-    echo $_db->getAllScores();
+    $result = $_db->getAllScores();
+    echo $json_response = json_encode($result);
 ?>
