@@ -1,7 +1,7 @@
 var app = angular.module('app', []);
 var timer;
-var tNum, tName;
-
+$scope.tName = "";
+$scope.tNum = 0;
 app.controller('indexController', ['$scope', '$http', function($scope, $http, $window){
     $scope.teamName = "";
     $scope.postTeamName = function(){
@@ -16,17 +16,17 @@ app.controller('indexController', ['$scope', '$http', function($scope, $http, $w
         });
 
         request.success(function (data) {
-            tName = $scope.teamName;
-            tNum = data;
-            console.log(tName, tNum);
+            $scope.tName = $scope.teamName;
+            $scope.tNum = data;
             window.location.replace("../views/prepare.html");
         });
     }
 }]);
 
 app.controller('prepareController', ['$scope', '$http', function($scope, $http, $window){
-    $scope.teamName = tName;
-    $scope.teamIndex = tNum;
+    console.log($scope.tName, $scope.tNum);
+    $scope.teamName = $scope.tName;
+    $scope.teamIndex = $scope.tNum;
     $scope.teamCar = "../images/car" + $scope.teamIndex + ".png";
 }]);
 
