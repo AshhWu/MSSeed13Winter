@@ -84,10 +84,12 @@ $t: 60;
 }
 .l-half-animation {
     -webkit-animation-name: l-rotate;
-    -webkit-animation-duration: $t+s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-fill-mode: forwards;
+    &:before {
+        -webkit-animation-duration: $t+s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-fill-mode: forwards;
+    }
 }
 #l-half:before {
     border-right: none;
@@ -97,10 +99,12 @@ $t: 60;
 }
 .r-half-animation {
     -webkit-animation-name: r-rotate;
-    -webkit-animation-duration: $t+s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-fill-mode: forwards;
+    &:before {
+        -webkit-animation-duration: $t+s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-fill-mode: forwards;
+    }
 }
 
 #r-half:before {
