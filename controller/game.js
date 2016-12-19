@@ -52,6 +52,8 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
     }
 
     $scope.clickNext = function(yourAns){
+        counter_60s();
+        resetTimer();
         clearInterval($scope.refreshIntervalId);
         if(yourAns == $scope.ans){
             $scope.score++;
@@ -71,8 +73,6 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
         $scope.D = $scope.questions[$scope.index][5];
         $scope.ans = $scope.questions[$scope.index][6];
         move($scope.score);
-        counter_60s();
-        resetTimer();
     }
 
 
