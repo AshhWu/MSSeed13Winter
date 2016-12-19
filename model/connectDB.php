@@ -51,7 +51,6 @@ require_once ("config.php");
                 $pre_sql = "SELECT * FROM Score";
                 $stmt = $this->pdo->prepare($pre_sql);
                 $stmt -> execute();
-                $stmt -> store_result();
                 return $stmt->num_rows;
                 /*$sql = "INSERT INTO Score (team, name, score, time)
                         VALUES (". $num_rows .",". $name .", 0, 0)";
