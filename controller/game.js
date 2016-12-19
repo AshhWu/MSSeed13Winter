@@ -28,12 +28,18 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
     };
 
     function counter_60s(){
-        $('.count').removeClass('count-animation');
-        $('.count').addClass('count-animation');
-        $('.l-half').removeClass('l-half-animation');
-        $('.l-half').addClass('l-half-animation');
-        $('.r-half').removeClass('r-half-animation');
-        $('.r-half').addClass('r-half-animation');
+        var el = $('.count'),
+            el1 = $('l-half'),
+            el2 = $('r-half'),
+            newone = el.clone(true);
+            newone1 = el1.clone(true);
+            newone2 = el2.clone(true);
+        el.before(newone);
+        $("." + el.attr("class") + ":last").remove();
+        el1.before(newone1);
+        $("." + el1.attr("class") + ":last").remove();
+        el2.before(newone2);
+        $("." + el2.attr("class") + ":last").remove();
         $('.count').html(60);
         var n = $('.count').html() - 1;
         $scope.refreshIntervalId = setInterval(function() {

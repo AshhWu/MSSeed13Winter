@@ -86,17 +86,13 @@ $t: 60;
     }
 
 }
-.l-half-animation {
-    -webkit-animation-name: l-rotate;
-}
+
 .l-half:before {
     border-right: none;
     border-top-left-radius: 999px;
     border-bottom-left-radius: 999px;
     -webkit-transform-origin: center right;
-}
-.r-half-animation {
-    -webkit-animation-name: r-rotate;
+    -webkit-animation-name: l-rotate;
 }
 
 .r-half:before {
@@ -104,6 +100,7 @@ $t: 60;
     border-top-right-radius: 999px;
     border-bottom-right-radius: 999px;
     -webkit-transform-origin: center left;
+    -webkit-animation-name: r-rotate;
 }
 
 /* -- TIMER -- */
@@ -118,10 +115,8 @@ $t: 60;
     font-family: Helvetica;
     color: #fff;
     z-index: 2;
-    -webkit-animation-fill-mode: forwards;
-}
-.count-animation {
     -webkit-animation: fadeout .5s ($t + 1)+s 1 linear;
+    -webkit-animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes l-rotate {
