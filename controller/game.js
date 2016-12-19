@@ -94,7 +94,29 @@ window.onload=function()
         $scope.cxt.drawImage(imgMain,0,0,256,256,461,40,50,50);
     };
 };
-
+$(function(){
+    $('.loading-title').addClass('animated slideInLeft');
+    $('.loading-title').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+        $(this).removeClass('animated');
+        $(this).removeClass('slideInLeft');
+    });
+    $('.loading-title').html(5);
+    var n = $('.loading-title').html() - 1;
+    var startTimer = setInterval(function() {
+        $('.loading-title').addClass('animated slideInLeft');
+        $('.loading-title').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $(this).removeClass('animated');
+            $(this).removeClass('slideInLeft');
+        });
+        if (n > 0) { $('.loading-title').html(n--); }
+        else {
+            counter_60s();
+            resetTimer();
+            $('.loading-cover').css('display', 'none');
+            clearInterval(startTimer);
+        }
+    }, 1500);
+});
 
 function move(count)
 {
@@ -255,27 +277,3 @@ function move(count)
         }
 }
 }]);
-
-$(function(){
-    $('.loading-title').addClass('animated slideInLeft');
-    $('.loading-title').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-        $(this).removeClass('animated');
-        $(this).removeClass('slideInLeft');
-    });
-    $('.loading-title').html(5);
-    var n = $('.loading-title').html() - 1;
-    var startTimer = setInterval(function() {
-        $('.loading-title').addClass('animated slideInLeft');
-        $('.loading-title').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass('animated');
-            $(this).removeClass('slideInLeft');
-        });
-        if (n > 0) { $('.loading-title').html(n--); }
-        else {
-            $('.loading-cover').css('display', 'none');
-            clearInterval(startTimer);
-            counter_60s();
-            resetTimer();
-        }
-    }, 1500);
-});
