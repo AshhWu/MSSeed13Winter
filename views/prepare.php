@@ -1,5 +1,6 @@
 <?php
 session_start();
+$teamIndex = $_SESSION['teamIndex'];
 if(isset($_POST["team"])){
 	$_SESSION["team"]=$_POST["team"];
 }
@@ -69,7 +70,7 @@ if(!isset($_SESSION["team"])){
 		}
     </script>
 </head>
-<body ng-controller="prepareController" data-ng-init="getTeamName()">
+<body ng-controller="prepareController" data-ng-init="getTeamIndex(<?php echo $_SESSION["team"];?>)">
     <div class="loading-cover">
         <div class="loading-title">
             Waiting
@@ -96,7 +97,7 @@ if(!isset($_SESSION["team"])){
             </div>
             <div class="team-car-box">
                 <div class="moving-arrow">></div>
-                您的車子：<img class="team-car" src="{{teamCar}}" hspace="10">
+                您的車子：<img class="team-car" src="../images/car"+<?php echo $teamIndex;?>+".png" hspace="10">
             </div>
 			<div class="guide-detail">
 				1.答對題目可前進一格</br>
@@ -109,8 +110,5 @@ if(!isset($_SESSION["team"])){
 		</div>
     </div>
     <footer>© Microsoft Corporation. Made by MSSeed 13th.</footer>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script src="../controller/prepare.js"></script>
 </body>
 </html>
