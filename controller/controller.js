@@ -2,7 +2,7 @@ var app = angular.module('app', []);
 var timer;
 app.value('tName', "");
 app.value('tNum', 0);
-app.controller('indexController', ['tName', 'tNum', '$scope', '$http', function($scope, $http, $window){
+app.controller('indexController', ['tName', 'tNum', '$scope', '$http', function indexController(tName, tNum, $scope, $http){
     $scope.teamName = "";
     $scope.postTeamName = function(){
         console.log("start post!");
@@ -24,7 +24,7 @@ app.controller('indexController', ['tName', 'tNum', '$scope', '$http', function(
     }
 }]);
 
-app.controller('prepareController', ['tName', 'tNum', '$scope', '$http', function($scope, $http, $window){
+app.controller('prepareController', ['tName', 'tNum', '$scope', '$http', function prepareController(tName, tNum, $scope, $http){
     console.log(tName, tNum);
     $scope.teamName = tName;
     $scope.teamIndex = tNum;
