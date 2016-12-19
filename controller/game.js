@@ -6,7 +6,7 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
     $scope.score = 0;
     $scope.refreshIntervalId = 0;
     console.log($scope.questionTitle);
-
+counter_60s();
     $scope.getQuestions = function(){
         $http.get('../model/getAllQuestions.php')
             .then(function(response){
@@ -28,18 +28,14 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
     };
 
     function counter_60s(){
-        var el = $('#count'),
-            el1 = $('#l-half'),
-            el2 = $('#r-half'),
-            newone = el.clone(true),
-            newone1 = el1.clone(true),
-            newone2 = el2.clone(true);
-        el.before(newone);
-        $("." + el.attr("class") + ":last").remove();
-        el1.before(newone1);
-        $("." + el1.attr("class") + ":last").remove();
-        el2.before(newone2);
-        $("." + el2.attr("class") + ":last").remove();
+        $('#count').removeClass("count-animation");
+        $('#l-half').removeClass("l-half-animation");
+        $('#r-half').removeClass("r-half-animation");
+        setTimeout(function() {
+            $('#count').addClass("count-animation");
+            $('#l-half').addClass("l-half-animation");
+            $('#r-half').addClass("r-half-animation");
+        }, 10)
         $('#count').html(60);
         var n = $('#count').html() - 1;
         $scope.refreshIntervalId = setInterval(function() {
@@ -53,6 +49,7 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
     }
 
     $scope.clickNext = function(yourAns){
+        counter_60s();
         clearInterval($scope.refreshIntervalId);
         if(yourAns == $scope.ans){
             $scope.score++;
@@ -72,7 +69,6 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
         $scope.D = $scope.questions[$scope.index][5];
         $scope.ans = $scope.questions[$scope.index][6];
         move($scope.score);
-        counter_60s();
     }
 
 
