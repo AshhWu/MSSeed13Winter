@@ -28,9 +28,9 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
     };
 
     function counter_60s(){
-        var el = $('.count'),
-            el1 = $('.l-half'),
-            el2 = $('.r-half'),
+        var el = $('#count'),
+            el1 = $('#l-half'),
+            el2 = $('#r-half'),
             newone = el.clone(true),
             newone1 = el1.clone(true),
             newone2 = el2.clone(true);
@@ -40,14 +40,14 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
         $("." + el1.attr("class") + ":last").remove();
         el2.before(newone2);
         $("." + el2.attr("class") + ":last").remove();
-        $('.count').html(60);
-        var n = $('.count').html() - 1;
+        $('#count').html(60);
+        var n = $('#count').html() - 1;
         $scope.refreshIntervalId = setInterval(function() {
-            if (n >= 0) { $('.count').html(n--); }
-            if ($('.count').html() <= 30 && $('.count').html() >= 10){
-                $('.count').css('color', '#FF7744');
-            } else if ($('.count').html() < 10){
-                $('.count').css('color', '#FF0000');
+            if (n >= 0) { $('#count').html(n--); }
+            if ($('#count').html() <= 30 && $('#count').html() >= 10){
+                $('#count').css('color', '#FF7744');
+            } else if ($('#count').html() < 10){
+                $('#count').css('color', '#FF0000');
             }
         }, 1000);
     }
