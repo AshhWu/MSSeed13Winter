@@ -1,12 +1,13 @@
 var app = angular.module('app', []);
-
+var timer;
 app.controller('gameController', ['$scope', '$http', function($scope, $http, $window){
     $scope.questions = [];
     $scope.index = 0;
     $scope.score = 0;
     $scope.refreshIntervalId = 0;
     console.log($scope.questionTitle);
-counter_60s();
+    counter_60s();
+    resetTimer();
     $scope.getQuestions = function(){
         $http.get('../model/getAllQuestions.php')
             .then(function(response){
@@ -23,22 +24,14 @@ counter_60s();
                 $scope.C = $scope.questions[$scope.index][4];
                 $scope.D = $scope.questions[$scope.index][5];
                 $scope.ans = $scope.questions[$scope.index][6];
-                counter_60s();
             })
     };
 
     function counter_60s(){
-        $('#count').removeClass("count-animation");
-        $('#l-half').removeClass("l-half-animation");
-        $('#r-half').removeClass("r-half-animation");
-        setTimeout(function() {
-            $('#count').addClass("count-animation");
-            $('#l-half').addClass("l-half-animation");
-            $('#r-half').addClass("r-half-animation");
-        }, 10)
+        clearInterval(timer);
         $('#count').html(60);
         var n = $('#count').html() - 1;
-        $scope.refreshIntervalId = setInterval(function() {
+        timer = setInterval(function() {
             if (n >= 0) { $('#count').html(n--); }
             if ($('#count').html() <= 30 && $('#count').html() >= 10){
                 $('#count').css('color', '#FF7744');
@@ -47,9 +40,20 @@ counter_60s();
             }
         }, 1000);
     }
+    function resetTimer() {
+        $('#count').removeClass("count-animation");
+        $('#l-half').removeClass("l-half-animation");
+        $('#r-half').removeClass("r-half-animation");
+        setTimeout(function() {
+            $('#count').addClass("count-animation");
+            $('#l-half').addClass("l-half-animation");
+            $('#r-half').addClass("r-half-animation");
+        }, 10)
+    }
 
     $scope.clickNext = function(yourAns){
         counter_60s();
+        resetTimer();
         clearInterval($scope.refreshIntervalId);
         if(yourAns == $scope.ans){
             $scope.score++;
