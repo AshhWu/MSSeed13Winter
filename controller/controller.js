@@ -1,6 +1,6 @@
 var app = angular.module('app', []);
 var timer;
-app.controller('indexController', ['$scope', '$http', function($scope, $http){
+app.controller('indexController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = "";
     $scope.postTeamName = function(){
         console.log("start post!");
@@ -22,7 +22,7 @@ app.controller('indexController', ['$scope', '$http', function($scope, $http){
     }
 }]);
 
-app.controller('prepareController', ['tName', 'tNum', '$scope', '$http', function prepareController(tName, tNum, $scope, $http){
+app.controller('prepareController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
     $scope.teamIndex = $window.sessionStorage.tNum;
     console.log($scope.teamIndex);
