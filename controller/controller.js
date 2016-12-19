@@ -3,6 +3,7 @@ var timer;
 app.controller('indexController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = "";
     $scope.postTeamName = function(){
+        $('.loading-cover').css('display', 'block');
         console.log("start post!");
         var request = $http({
             method: "post",
