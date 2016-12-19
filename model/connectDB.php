@@ -52,7 +52,7 @@ require_once ("config.php");
                 $stmt = $this->pdo->query($pre_sql);
                 $num_rows = mysql_num_rows($result) + 1;
                 $sql = "INSERT INTO Score (team, name, score, time)
-                        VALUES (" $num_rows "," $name ", 0, 0)";
+                        VALUES (". $num_rows .",". $name .", 0, 0)";
                 $stmt = $this->pdo->query($sql);
                 return $stmt->fetchAll(PDO::FETCH_NUM);
             }
