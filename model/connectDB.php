@@ -51,11 +51,11 @@ require_once ("config.php");
                 $pre_sql = "SELECT count(*) FROM Score";
                 $stmt = $this->pdo->prepare($pre_sql);
                 $stmt -> execute();
-                return $stmt -> fetchColumn();
-                /*$sql = "INSERT INTO Score (team, name, score, time)
+                $num_rows =  $stmt -> fetchColumn() + 1;
+                $sql = "INSERT INTO Score (team, name, score, time)
                         VALUES (". $num_rows .",". $name .", 0, 0)";
                 $stmt = $this->pdo->prepare($sql);
-                $stmt -> execute();*/
+                $stmt -> execute();
             }
         public
             function getTeamName($index){
