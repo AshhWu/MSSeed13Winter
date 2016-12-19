@@ -66,5 +66,11 @@ require_once ("config.php");
                 $stmt = $this->pdo->query($sql);
                 return $stmt->fetchAll(PDO::FETCH_NUM);
             }
+        public
+            function deleteAllScores(){
+                $sql = "DELETE FROM Score";
+                $stmt = $this->pdo->prepare($sql);
+                $stmt -> execute();
+            }
     }
 ?>
