@@ -255,3 +255,27 @@ function move(count)
         }
 }
 }]);
+
+$(function(){
+    $('.loading-title').addClass('animated slideInLeft');
+    $('.loading-title').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+        $(this).removeClass('animated');
+        $(this).removeClass('slideInLeft');
+    });
+    $('.loading-title').html(5);
+    var n = $('.loading-title').html() - 1;
+    var startTimer = setInterval(function() {
+        $('.loading-title').addClass('animated slideInLeft');
+        $('.loading-title').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $(this).removeClass('animated');
+            $(this).removeClass('slideInLeft');
+        });
+        if (n > 0) { $('.loading-title').html(n--); }
+        else {
+            $('.loading-cover').css('display', 'none');
+            clearInterval(startTimer);
+            counter_60s();
+            resetTimer();
+        }
+    }, 1500);
+});
