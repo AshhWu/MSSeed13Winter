@@ -28,15 +28,18 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
     };
 
     function counter_60s(){
-        var elm = $('#count');
-        var newone = elm.cloneNode(true);
-        elm.parentNode.replaceChild(newone, elm);
-        var elm1 = $('#l-half');
-        var newone1 = elm1.cloneNode(true);
-        elm1.parentNode.replaceChild(newone1, elm1);
-        var elm2 = $('#r-half');
-        var newone2 = elm2.cloneNode(true);
-        elm2.parentNode.replaceChild(newone2, elm2);
+        var el = $('#count'),
+            el1 = $('#l-half'),
+            el2 = $('#r-half'),
+            newone = el.clone(true),
+            newone1 = el1.clone(true),
+            newone2 = el2.clone(true);
+        el.before(newone);
+        $("." + el.attr("class") + ":last").remove();
+        el1.before(newone1);
+        $("." + el1.attr("class") + ":last").remove();
+        el2.before(newone2);
+        $("." + el2.attr("class") + ":last").remove();
         $('#count').html(60);
         var n = $('#count').html() - 1;
         $scope.refreshIntervalId = setInterval(function() {
