@@ -50,16 +50,16 @@ require_once ("config.php");
             function postTeamName($name){
                 $pre_sql = "SELECT * FROM Score";
                 $stmt = $this->pdo->query($pre_sql);
-                if ( mysql_num_rows($result) != null) {
-                    $num_rows = mysql_num_rows($result) + 1;
+                if ( mysql_num_rows($stmt->fetchAll(PDO::FETCH_NUM)) != null) {
+                    $num_rows = mysql_num_rows($stmt->fetchAll(PDO::FETCH_NUM)) + 1;
                 }
                 else {
                     $num_rows = 1;
                 }
                 $sql = "INSERT INTO Score (team, name, score, time)
                         VALUES (". $num_rows .",". $name .", 0, 0)";
-                $stmt = $this->pdo->query($sql);
-                return $stmt->fetchAll(PDO::FETCH_NUM);
+                $stmt = $this->pdo->prepare($sql);
+                $stmt -> execute();
             }
         public
             function getTeamName($index){
