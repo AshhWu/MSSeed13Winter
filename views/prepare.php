@@ -7,8 +7,8 @@ if(!isset($_SESSION["team"])){
 	header("Location: ../index.html?state=nosession");
 	die();
 }
-
 ?>
+
 <!DOCTYPE html>
 <html ng-app="app">
 <head>

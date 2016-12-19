@@ -50,7 +50,7 @@ require_once ("config.php");
             function postTeamName($name){
                 $pre_sql = "SELECT * FROM Score";
                 $stmt = $this->pdo->query($pre_sql);
-                return $stmt->fetchAll(PDO::FETCH_NUM);
+                return $stmt->num_rows;
                 /*$sql = "INSERT INTO Score (team, name, score, time)
                         VALUES (". $num_rows .",". $name .", 0, 0)";
                 $stmt = $this->pdo->prepare($sql);
