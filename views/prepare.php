@@ -69,7 +69,7 @@ if(!isset($_SESSION["team"])){
 		}
     </script>
 </head>
-<body ng-controller="prepareController">
+<body ng-controller="prepareController" data-ng-init="getTeamName()">
     <div class="loading-cover">
         <div class="loading-title">
             Waiting

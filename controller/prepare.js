@@ -1,10 +1,21 @@
 var app = angular.module('app', []);
 
 app.controller('prepareController', ['$scope', '$http', function($scope, $http, $window){
-    $scope.teamName = "最猛寒分IT組";
+    $scope.teamName = "Loading";
     $scope.teamIndex = 1;
-    $scope.teamCar = "../images/car" + 1 + ".png";
+    $scope.teamCar = "../images/car" + $scope.teamIndex + ".png";
     $scope.getTeamName = function(){
+        var request = $http({
+            method: "post",
+            url: "../model/getTeamName.php",
+            data: {
+                index: $scope.teamIndex
+            },
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        });
 
+        request.success(function (data) {
+            $scope.teamName = data;
+        });
     }
 }]);
