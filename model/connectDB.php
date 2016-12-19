@@ -53,7 +53,7 @@ require_once ("config.php");
                 $stmt -> execute();
                 $num_rows =  $stmt -> fetchColumn() + 1;
                 $sql = "INSERT INTO Score (team, name, score, time)
-                        VALUES ("$num_rows","$name", 0, 0)";
+                        VALUES ('$num_rows','$name', 0, 0)";
                 $stmt = $this->pdo->prepare($sql);
                 $stmt -> execute();
             }
