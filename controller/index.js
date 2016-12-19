@@ -1,9 +1,10 @@
 var app = angular.module('app', []);
 
 app.controller('indexController', ['$scope', '$http', function($scope, $http, $window){
-
+    $scope.teamName = "";
     $scope.postTeamName = function(){
         console.log("start post!");
+        console.log($scope.teamName);
         var request = $http({
             method: "post",
             url: "../model/postTeamName.php",
@@ -14,7 +15,7 @@ app.controller('indexController', ['$scope', '$http', function($scope, $http, $w
         });
 
         request.success(function (data) {
-            console.log("succcess");
+            console.log(data);
         });
     }
 }]);
