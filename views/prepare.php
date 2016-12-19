@@ -10,7 +10,7 @@ if(!isset($_SESSION["team"])){
 
 ?>
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
     <title>微軟寒假分享會</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
@@ -27,23 +27,23 @@ if(!isset($_SESSION["team"])){
     <script type="text/javascript">
          function waiting (){
             $('.loading-cover').css('display', 'block');
-			var wsServer = 'ws://127.0.0.1:8080'; 
+			var wsServer = 'ws://127.0.0.1:8080';
 			var socket = new WebSocket(wsServer);
-			socket.onopen = function (evt) { onOpen(evt) }; 
-			socket.onclose = function (evt) { onClose(evt) }; 
-			socket.onmessage = function (evt) { onMessage(evt) }; 
-			socket.onerror = function (evt) { onError(evt) }; 
+			socket.onopen = function (evt) { onOpen(evt) };
+			socket.onclose = function (evt) { onClose(evt) };
+			socket.onmessage = function (evt) { onMessage(evt) };
+			socket.onerror = function (evt) { onError(evt) };
             // setTimeout(function(){
                 // window.location.assign("game.html");
             // }, 2000);
         }
-		function onOpen(evt) { 
+		function onOpen(evt) {
 			console.log("连接服务器成功");
 			isConnect = true;
-		} 
-		function onClose(evt) { 
-			console.log("Disconnected"); 
-		} 
+		}
+		function onClose(evt) {
+			console.log("Disconnected");
+		}
 		function onMessage(evt) {
 			var data = JSON.parse(evt.data);
 			switch (data.type) {
@@ -55,11 +55,11 @@ if(!isset($_SESSION["team"])){
 					console.log(data.msg);
 					break;
 			}
-			
+
 			console.log('Retrieved data from server: ' + evt.data);
 		}
-		function onError(evt) { 
-			//console.log('Error occured: ' + evt.data); 
+		function onError(evt) {
+			//console.log('Error occured: ' + evt.data);
 		}
 		function sendMsg() {
 			if(isConnect){
@@ -69,7 +69,7 @@ if(!isset($_SESSION["team"])){
 		}
     </script>
 </head>
-<body>
+<body ng-controller="prepareController">
     <div class="loading-cover">
         <div class="loading-title">
             Waiting
@@ -92,11 +92,11 @@ if(!isset($_SESSION["team"])){
 		<div class="col-lg-5 col-lg-offset-7 guide">
             <div class="team-name">
                 <div class="moving-arrow">></div>
-                隊伍名稱：<?php echo $_SESSION["team"];?>
+                隊伍名稱：{{teamName}}
             </div>
             <div class="team-car-box">
                 <div class="moving-arrow">></div>
-                您的車子：<img class="team-car" src="../images/car-1.png" hspace="10">
+                您的車子：<img class="team-car" src="{{teamCar}}" hspace="10">
             </div>
 			<div class="guide-detail">
 				1.答對題目可前進一格</br>
@@ -109,5 +109,8 @@ if(!isset($_SESSION["team"])){
 		</div>
     </div>
     <footer>© Microsoft Corporation. Made by MSSeed 13th.</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="../controller/prepare.js"></script>
 </body>
 </html>

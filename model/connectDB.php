@@ -46,5 +46,12 @@ require_once ("config.php");
                 $stmt = $this->pdo->prepare($sql);
                 $stmt -> execute();
             }
+        public
+            function postName($name){
+                $sql = "SELECT *
+                        FROM Score";
+                $stmt = $this->pdo->query($sql);
+                return $stmt->fetchAll(PDO::FETCH_NUM);
+            }
     }
 ?>
