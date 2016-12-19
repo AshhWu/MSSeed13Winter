@@ -31,8 +31,8 @@ app.controller('gameController', ['$scope', '$http', function($scope, $http, $wi
         var el = $('.count'),
             el1 = $('.l-half'),
             el2 = $('.r-half'),
-            newone = el.clone(true);
-            newone1 = el1.clone(true);
+            newone = el.clone(true),
+            newone1 = el1.clone(true),
             newone2 = el2.clone(true);
         el.before(newone);
         $("." + el.attr("class") + ":last").remove();
