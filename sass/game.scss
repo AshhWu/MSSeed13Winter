@@ -79,15 +79,15 @@ $t: 60;
         height: 100%;
         box-sizing: border-box;
         border: $w+px solid #fff;
-        -webkit-animation-duration: $t+s;
-        -webkit-animation-iteration-count: 1;
-        -webkit-animation-timing-function: linear;
-        -webkit-animation-fill-mode: forwards;
     }
 
 }
 .l-half-animation {
     -webkit-animation-name: l-rotate;
+    -webkit-animation-duration: $t+s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
 }
 #l-half:before {
     border-right: none;
@@ -97,6 +97,10 @@ $t: 60;
 }
 .r-half-animation {
     -webkit-animation-name: r-rotate;
+    -webkit-animation-duration: $t+s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
 }
 
 #r-half:before {
@@ -118,9 +122,9 @@ $t: 60;
     font-family: Helvetica;
     color: #fff;
     z-index: 2;
-    -webkit-animation-fill-mode: forwards;
 }
 .count-animation {
+    -webkit-animation-fill-mode: forwards;
     -webkit-animation: fadeout .5s ($t + 1)+s 1 linear;
 }
 
