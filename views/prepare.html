@@ -1,15 +1,3 @@
-<?php
-session_start();
-$teamIndex = $_SESSION['teamIndex'];
-if(isset($_POST["team"])){
-	$_SESSION["team"]=$_POST["team"];
-}
-if(!isset($_SESSION["team"])){
-	header("Location: ../index.html?state=nosession");
-	die();
-}
-?>
-
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
@@ -70,7 +58,7 @@ if(!isset($_SESSION["team"])){
 		}
     </script>
 </head>
-<body ng-controller="prepareController" data-ng-init="getTeamIndex(<?php echo $_SESSION["team"];?>)">
+<body ng-controller="prepareController">
     <div class="loading-cover">
         <div class="loading-title">
             Waiting
@@ -93,11 +81,11 @@ if(!isset($_SESSION["team"])){
 		<div class="col-lg-5 col-lg-offset-7 guide">
             <div class="team-name">
                 <div class="moving-arrow">></div>
-                隊伍名稱：<?php echo $_SESSION["team"];?>
+                隊伍名稱：{{teamName}}
             </div>
             <div class="team-car-box">
                 <div class="moving-arrow">></div>
-                您的車子：<img class="team-car" src="../images/car"+<?php echo $teamIndex;?>+".png" hspace="10">
+                您的車子：<img class="team-car" src="{{teamCar}}" hspace="10">
             </div>
 			<div class="guide-detail">
 				1.答對題目可前進一格</br>
