@@ -83,8 +83,8 @@ $t: 60;
 
 }
 .l-half-animation {
-    -webkit-animation-name: l-rotate;
     &:before {
+        -webkit-animation-name: l-rotate;
         -webkit-animation-duration: $t+s;
         -webkit-animation-iteration-count: 1;
         -webkit-animation-timing-function: linear;
@@ -98,8 +98,8 @@ $t: 60;
     -webkit-transform-origin: center right;
 }
 .r-half-animation {
-    -webkit-animation-name: r-rotate;
     &:before {
+        -webkit-animation-name: r-rotate;
         -webkit-animation-duration: $t+s;
         -webkit-animation-iteration-count: 1;
         -webkit-animation-timing-function: linear;
