@@ -18,7 +18,7 @@ app.controller('indexController', ['$scope', '$http', function($scope, $http, $w
         request.success(function (data) {
             tName = $scope.teamName;
             tNum = data;
-            console.log(data);
+            console.log(tName, tNum);
             window.location.replace("../views/prepare.html");
         });
     }
