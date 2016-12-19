@@ -19,7 +19,7 @@ app.controller('indexController', ['$scope', '$http', function($scope, $http, $w
             tName = $scope.teamName;
             tNum = data;
             console.log(data);
-            window.location.replace = "../views/prepare.html";
+            window.location.replace("../views/prepare.html");
         });
     }
 }]);
