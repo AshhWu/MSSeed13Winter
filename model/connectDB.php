@@ -56,6 +56,7 @@ require_once ("config.php");
                         VALUES ('$num_rows','$name', 0, 0)";
                 $stmt = $this->pdo->prepare($sql);
                 $stmt -> execute();
+                return $num_rows;
             }
         public
             function getTeamName($index){

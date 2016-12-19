@@ -4,7 +4,6 @@ app.controller('indexController', ['$scope', '$http', function($scope, $http, $w
     $scope.teamName = "";
     $scope.postTeamName = function(){
         console.log("start post!");
-        console.log($scope.teamName);
         var request = $http({
             method: "post",
             url: "../model/postTeamName.php",
