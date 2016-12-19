@@ -15,16 +15,16 @@ app.controller('indexController', ['$scope', '$http', '$window', function($scope
 
         request.success(function (data) {
             $window.sessionStorage.tName = $scope.teamName;
-            $window.sessionStorage.tNum = $scope.tNum;
+            $window.sessionStorage.tNum = data;
             window.location.href = "../views/prepare.html?name="+$scope.teamName;
         });
     }
 }]);
 
 app.controller('prepareController', ['$scope', '$http', '$window', function($scope, $http, $window){
+    console.log($window.sessionStorage.tName + " " + $window.sessionStorage.tNum);
     $scope.teamName = $window.sessionStorage.tName;
     $scope.teamIndex = $window.sessionStorage.tNum;
-    console.log($scope.teamIndex);
     $scope.teamCar = "../images/car" + $scope.teamIndex + ".png";
 }]);
 
