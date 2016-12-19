@@ -46,5 +46,24 @@ require_once ("config.php");
                 $stmt = $this->pdo->prepare($sql);
                 $stmt -> execute();
             }
+        public
+            function postTeamName($name){
+                $pre_sql = "SELECT * FROM Score";
+                $stmt = $this->pdo->prepare($pre_sql);
+                $stmt -> execute();
+                return $stmt->num_rows;
+                /*$sql = "INSERT INTO Score (team, name, score, time)
+                        VALUES (". $num_rows .",". $name .", 0, 0)";
+                $stmt = $this->pdo->prepare($sql);
+                $stmt -> execute();*/
+            }
+        public
+            function getTeamName($index){
+                $sql = "SELECT name
+                        FROM Score
+                        WHERE team = ". $index;
+                $stmt = $this->pdo->query($sql);
+                return $stmt->fetchAll(PDO::FETCH_NUM);
+            }
     }
 ?>

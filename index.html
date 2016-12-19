@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
     <title>微軟寒假分享會</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
@@ -26,7 +26,7 @@
     });
     </script>
 </head>
-<body>
+<body ng-controller="indexController">
 	<div class="col-lg-12 main-container">
         <div class="background-cover-1"></div>
         <div class="background-cover-2"></div>
@@ -37,15 +37,19 @@
     		<div class="logo">
                 環<img class="logo-img" src="images/taiwan.png" hspace="30">挑戰賽
             </div>
-            <form method="POST" action="views/prepare.php">
+            <div>
     			<div class="form">
                     <div class="moving-arrow">></div>
-    				<input type="text" size="16" name="team" class="form-text" placeholder="請輸入挑戰隊名"><br>
-    				<button type="submit" class="form-btn">送出</button>
+    				<input type="text" size="16" name="team" class="form-text" placeholder="請輸入挑戰隊名" ng-model="teamName"><br>
+    				<button class="form-btn" ng-click="postTeamName();">送出</button>
     			</div>
-    		</form>
+    		</div>
         </div>
     </div>
     <footer>© Microsoft Corporation. Made by MSSeed 13th.</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="controller/index.js"></script>
+
 </body>
 </html>

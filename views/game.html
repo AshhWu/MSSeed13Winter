@@ -13,10 +13,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../content/stylesheets/global.css" />
     <link rel="stylesheet" href="../content/stylesheets/game.css" />
+    <link rel="stylesheet" href="../content/stylesheets/animate.css" />
     <script src="../content/javascripts/map.js"></script>
     <link rel="stylesheet" href="../content/stylesheets/mapStyle.css" />
 </head>
 <body ng-controller="gameController" data-ng-init="getQuestions()">
+    <div class="loading-cover">
+        <div class="loading-title"></div>
+    </div>
     <div class="header-container">
         <div class="header-title">
             微。跡<img class="header-logo" src="../images/taiwan-1.png" hspace="10">
@@ -37,9 +41,9 @@
         <div class="col-lg-6 qa-container">
             <div class="col-lg-2 col-lg-offset-10 timer-box">
                 <div class="circle center">
-                    <div class="count">60</div>
-                    <div class="l-half"></div>
-                    <div class="r-half"></div>
+                    <div id="count" class="count-animation">60</div>
+                    <div id="l-half" class="l-half-animation"></div>
+                    <div id="r-half" class="r-half-animation"></div>
                 </div>
             </div>
             <div class="col-lg-8 col-lg-offset-2">
