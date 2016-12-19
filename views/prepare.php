@@ -92,7 +92,7 @@ if(!isset($_SESSION["team"])){
 		<div class="col-lg-5 col-lg-offset-7 guide">
             <div class="team-name">
                 <div class="moving-arrow">></div>
-                隊伍名稱：{{teamName}}
+                隊伍名稱：<?php echo $_SESSION["team"];?>
             </div>
             <div class="team-car-box">
                 <div class="moving-arrow">></div>
