@@ -1,5 +1,6 @@
 var app = angular.module('app', []);
 var timer;
+var index;
 app.controller('indexController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = "";
     $scope.postTeamName = function(){
@@ -17,6 +18,7 @@ app.controller('indexController', ['$scope', '$http', '$window', function($scope
         request.success(function (data) {
             $window.sessionStorage.tName = $scope.teamName;
             $window.sessionStorage.tNum = data;
+            index = $window.sessionStorage.tNum;
             window.location.href = "../views/prepare.html?name="+$scope.teamName;
         });
     }
@@ -115,7 +117,7 @@ window.onload=function()
     $scope.cxt=c.getContext("2d");
     //主角
     imgMain=new Image();
-    imgMain.src="../images/car1.png";
+    imgMain.src="../images/car"+ index + ".png";
     currentImgMainX=461;
     currentImgMainY=30;
     imgMain.onload=function()
