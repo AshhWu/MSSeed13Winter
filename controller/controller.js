@@ -149,8 +149,11 @@ $(function(){
     }, 1500);
 });
 
+   
+
 function move(count)
 {
+    $scope.cxt.clearRect(0,0,600,423);
     switch (count)
         {
             case undefined:
