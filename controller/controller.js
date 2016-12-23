@@ -29,7 +29,7 @@ app.controller('prepareController', ['$scope', '$http', '$window', function($sco
     $scope.teamCar = "../images/car" + $scope.teamIndex + ".png";
 }]);
 
-app.controller('gameController', ['$scope', '$http', function($scope, $http, $window){
+app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.questions = [];
     $scope.index = 0;
     $scope.score = 0;
