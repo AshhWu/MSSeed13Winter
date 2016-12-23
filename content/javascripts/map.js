@@ -36,6 +36,8 @@ function move(e)
                 
         }
     
+     cxt.clearRect(0,0,600,423);
+    
     switch (count)
         {
             case undefined:
