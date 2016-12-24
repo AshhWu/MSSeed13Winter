@@ -61,9 +61,13 @@ body {
   width: 200px;
   height: 400px;
   background-color: white;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 60% 100%, 85% 50%, 60% 0);
   -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 60% 100%, 85% 50%, 60% 0);
   -webkit-transition: right .2s ease-out;
   transition: right .2s ease-out; }
+  @media (min-width: 1400px) {
+    .background-cover-1 {
+      top: 30%; } }
 
 .background-cover-2 {
   position: absolute;
@@ -73,13 +77,22 @@ body {
   width: 250px;
   height: 400px;
   background-color: white;
+  clip-path: polygon(40% 0%, 15% 50%, 40% 100%, 25% 100%, 0% 50%, 25% 0);
   -webkit-clip-path: polygon(40% 0%, 15% 50%, 40% 100%, 25% 100%, 0% 50%, 25% 0);
   -webkit-transition: left .2s ease-out;
   transition: left .2s ease-out; }
+  @media (min-width: 1400px) {
+    .background-cover-2 {
+      top: 30%; } }
 
 .head-logo .head-logo-title {
   padding-top: 45px;
   font-size: 40px; }
+  @media (min-width: 1400px) {
+    .head-logo .head-logo-title {
+      font-size: 50px;
+      padding-top: 0;
+      padding-bottom: 30px; } }
 
 .logo {
   position: relative;
@@ -89,6 +102,9 @@ body {
     animation: floating 3.5s infinite;
     width: 130px;
     height: 200px; }
+  @media (min-width: 1400px) {
+    .logo {
+      font-size: 45px; } }
 
 ::-webkit-input-placeholder {
   color: white;
@@ -117,5 +133,15 @@ body {
     transition: bottom .2s ease-out; }
     .form .form-btn:hover {
       bottom: 5px; }
+    @media (min-width: 1400px) {
+      .form .form-btn {
+        margin-top: 50px; } }
+  @media (min-width: 1400px) {
+    .form {
+      font-size: 36px; } }
+
+@media (min-width: 1400px) {
+  .col-lg-6 {
+    margin-top: 10%; } }
 
 /*# sourceMappingURL=index.css.map */

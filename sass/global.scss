@@ -1,4 +1,7 @@
 //run sass --watch scss:content/stylesheets/ in Project
+.ng-scope {
+    height: 100%;
+}
 body {
     font-size: 16px;
     font-family: 'Heiti TC', HeitiTC-Light, LiHei, Lato, Verdana, 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
