@@ -78,10 +78,14 @@
                 color: #329fa2;
             }
 			@media (min-width: 1400px) {
+				width: 200px;
 				margin-top: 50px;
 	            font-size: 25px;
 	        }
         }
+		@media (min-width: 1400px) {
+			height: 200px;
+		}
     }
 }
 
