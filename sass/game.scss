@@ -73,7 +73,7 @@
             background-color: transparent;
             color: white;
             transition: all 0.2s linear;
-            &:focus {
+            &:focus, &:hover {
                 background-color: white;
                 color: #329fa2;
             }

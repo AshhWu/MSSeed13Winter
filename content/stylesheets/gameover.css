@@ -1,3 +1,9 @@
+.main-container {
+  margin-top: 80px; }
+  @media (min-width: 1400px) {
+    .main-container {
+      margin-top: 150px; } }
+
 .header-title {
   color: white; }
 
@@ -6,6 +12,9 @@
   .word-container .word-box {
     margin-top: 200px;
     display: inline-block; }
+  @media (min-width: 1400px) {
+    .word-container {
+      font-size: 80px; } }
 
 .result-container {
   padding: 30px;
@@ -18,8 +27,17 @@
     font-size: 36px; }
     .result-container .result-title .result-taiwan {
       width: 50px; }
+      @media (min-width: 1400px) {
+        .result-container .result-title .result-taiwan {
+          width: 70px; } }
+    @media (min-width: 1400px) {
+      .result-container .result-title {
+        font-size: 50px; } }
   .result-container .result-subtitle {
     font-size: 28px; }
+    @media (min-width: 1400px) {
+      .result-container .result-subtitle {
+        font-size: 35px; } }
   .result-container .result-list {
     text-align: left;
     font-size: 20px;
@@ -29,16 +47,30 @@
       display: inline-block;
       width: 300px;
       border-bottom: 1px solid #329fa2; }
+      @media (min-width: 1400px) {
+        .result-container .result-list .team-name {
+          height: 45px; } }
     .result-container .result-list .team-score {
       height: 30px;
       display: inline-block;
       width: 40px;
       border-bottom: 1px solid #329fa2; }
+      @media (min-width: 1400px) {
+        .result-container .result-list .team-score {
+          height: 45px;
+          width: 50px; } }
     .result-container .result-list .team-time {
       height: 30px;
       display: inline-block;
       width: 80px;
       border-bottom: 1px solid #329fa2; }
+      @media (min-width: 1400px) {
+        .result-container .result-list .team-time {
+          height: 45px;
+          width: 90px; } }
+    @media (min-width: 1400px) {
+      .result-container .result-list {
+        font-size: 30px; } }
   .result-container .result-img-box {
     display: block;
     margin-top: 20px;
@@ -49,11 +81,23 @@
       margin-left: -92px;
       display: block;
       margin-top: 10px; }
+      @media (min-width: 1400px) {
+        .result-container .result-img-box .result-img {
+          margin-top: 30px; } }
   .result-container .MS-logo {
     position: absolute;
     bottom: 30px;
     right: 30px;
     width: 100px; }
+    @media (min-width: 1400px) {
+      .result-container .MS-logo {
+        bottom: 40px;
+        right: 40px;
+        width: 140px; } }
+  @media (min-width: 1400px) {
+    .result-container {
+      height: 600px;
+      padding: 40px; } }
 
 .typed-cursor {
   opacity: 1;
