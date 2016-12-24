@@ -1,3 +1,9 @@
+.main-container {
+  margin-top: 80px; }
+  @media (min-width: 1400px) {
+    .main-container {
+      margin-top: 150px; } }
+
 .header-title {
   color: white; }
 
@@ -6,17 +12,29 @@
   font-size: 40px; }
   .game-title .game-taiwan {
     width: 70px; }
+    @media (min-width: 1400px) {
+      .game-title .game-taiwan {
+        margin-top: 90px; } }
+  @media (min-width: 1400px) {
+    .game-title {
+      margin-top: 60px; } }
 
 .arrive-title {
   font-size: 40px;
   margin-top: 30px;
   text-align: center; }
+  @media (min-width: 1400px) {
+    .arrive-title {
+      margin-top: 50px; } }
 
 .arrive-time {
   display: none;
   font-size: 40px;
   margin-top: 30px;
   text-align: center; }
+  @media (min-width: 1400px) {
+    .arrive-time {
+      margin-top: 50px; } }
 
 .arrive-waiting {
   font-size: 30px;
@@ -24,11 +42,17 @@
   text-align: center; }
   .arrive-waiting .waiting-word {
     display: none; }
+  @media (min-width: 1400px) {
+    .arrive-waiting {
+      margin-top: 40px; } }
 
 .spinner {
   display: none;
   width: 70px;
   text-align: center; }
+  @media (min-width: 1400px) {
+    .spinner {
+      width: 90px; } }
 
 .spinner > div {
   width: 12px;
@@ -38,6 +62,10 @@
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both; }
+  @media (min-width: 1400px) {
+    .spinner > div {
+      width: 20px;
+      height: 20px; } }
 
 .spinner .bounce1 {
   -webkit-animation-delay: -0.32s;
