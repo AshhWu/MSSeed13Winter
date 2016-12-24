@@ -72,9 +72,6 @@
   margin: 20px 0;
   font-size: 80px;
   text-align: center; }
-  @media (min-width: 1400px) {
-    .guide-title {
-      left: 10%; } }
 
 .guide {
   margin-top: 80px;
