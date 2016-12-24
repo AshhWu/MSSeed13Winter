@@ -73,6 +73,7 @@ body{
     width: 200px;
     height: 400px;
     background-color: white;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 60% 100%, 85% 50%, 60% 0);
     -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 60% 100%, 85% 50%, 60% 0);
     -webkit-transition: right .2s ease-out;
     transition: right .2s ease-out;
@@ -85,6 +86,7 @@ body{
     width: 250px;
     height: 400px;
     background-color: white;
+    clip-path: polygon(40% 0%, 15% 50%, 40% 100%, 25% 100%, 0% 50%, 25% 0);
     -webkit-clip-path: polygon(40% 0%, 15% 50%, 40% 100%, 25% 100%, 0% 50%, 25% 0);
     -webkit-transition: left .2s ease-out;
     transition: left .2s ease-out;
