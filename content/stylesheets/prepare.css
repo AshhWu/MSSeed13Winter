@@ -67,19 +67,23 @@
   color: #329fa2;
   position: absolute;
   letter-spacing: 8px;
-  top: 20%;
-  left: 9%;
+  top: 28%;
+  left: 8%;
   margin: 20px 0;
   font-size: 80px;
   text-align: center; }
+  @media (min-width: 1400px) {
+    .guide-title {
+      left: 10%; } }
 
 .guide {
-  margin-top: 20px;
+  margin-top: 80px;
   text-align: center; }
   .guide .guide-detail {
     margin-left: 40px;
     font-size: 25px;
-    text-align: left; }
+    text-align: left;
+    margin-top: 20px; }
     @media (min-width: 1400px) {
       .guide .guide-detail {
         font-size: 30px;
@@ -96,7 +100,8 @@
   .guide .team-car-box {
     text-align: left;
     font-size: 30px;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-top: 10px; }
     .guide .team-car-box .team-car {
       width: 100px; }
       @media (min-width: 1400px) {
@@ -104,8 +109,7 @@
           width: 120px; } }
     @media (min-width: 1400px) {
       .guide .team-car-box {
-        font-size: 40px;
-        margin-top: 10px; } }
+        font-size: 40px; } }
   .guide button {
     font-size: 26px;
     padding: 5px 10px;
@@ -120,5 +124,8 @@
     transition: bottom .2s ease-out; }
     .guide button:hover {
       bottom: 5px; }
+    @media (min-width: 1400px) {
+      .guide button {
+        font-size: 36px; } }
 
 /*# sourceMappingURL=prepare.css.map */
