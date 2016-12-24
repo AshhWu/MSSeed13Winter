@@ -30,6 +30,7 @@ app.controller('prepareController', ['$scope', '$http', '$window', function($sco
 }]);
 
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
+    $scope.teamName = $window.sessionStorage.tName;
     $scope.questions = [];
     $scope.index = 0;
     $scope.score = 0;

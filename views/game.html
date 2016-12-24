@@ -33,9 +33,13 @@
             </div>
             <canvas id="myCanvas" width="600" height="423" style="border:1px solid gray">
             </canvas>
-             <div id="talkBox" style="height:20px">
-                <span class="col-lg-offset-3 col-lg-6" style="font-size: 30px">Team : 老子組＝＝</span>
-                <span class="col-lg-offset-3 col-lg-6" style="font-size: 30px">Score : {{score}}</span>
+             <div class="col-lg-8 col-lg-offset-2 status-box">
+                <div class="status-title">
+                    Team：<span ng-bind="teamName"></span>
+                </div>
+                <div class="status-title">
+                    Score : {{score}}
+                </div>
             </div>
         </div>
         <div class="col-lg-6 qa-container">
@@ -46,7 +50,7 @@
                     <div id="r-half" class="r-half-animation"></div>
                 </div>
             </div>
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-9 col-lg-offset-2">
                 <div class="question"><span style="font-size: 40px;">Q: </span>{{questionTitle}}</div>
                 <div class="answer">
                     <button class="col-lg-5 ans1" ng-click="clickNext(1)">{{A}}</button>

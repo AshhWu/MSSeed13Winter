@@ -1,3 +1,18 @@
+#myCanvas {
+	margin: 20px 10px;
+	@media (min-width: 1400px) {
+		margin: 50px 30px;
+	}
+}
+.status-box {
+	.status-title {
+		font-size: 30px;
+		color: #329fa2;
+		@media (min-width: 1400px) {
+			font-size: 40px;
+		}
+	}
+}
 .loading-cover{
 	height: 100%;
 	width: 100%;
@@ -41,6 +56,9 @@
     .question {
         height: 120px;
         font-size: 25px;
+		@media (min-width: 1400px) {
+			font-size: 35spx;
+		}
     }
     .answer {
         height: 150px;
@@ -55,10 +73,14 @@
             background-color: transparent;
             color: white;
             transition: all 0.2s linear;
-            &:hover {
+            &:focus {
                 background-color: white;
                 color: #329fa2;
             }
+			@media (min-width: 1400px) {
+				margin-top: 50px;
+	            font-size: 25px;
+	        }
         }
     }
 }
@@ -66,7 +88,9 @@
 $d: 80;
 $w: 6;
 $t: 60;
-
+@media (min-width: 1400px) {
+	$d: 100;
+}
 .center {
     position: absolute;
     top: 50%;

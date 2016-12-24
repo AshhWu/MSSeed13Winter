@@ -1,3 +1,16 @@
+#myCanvas {
+  margin: 20px 10px; }
+  @media (min-width: 1400px) {
+    #myCanvas {
+      margin: 50px 30px; } }
+
+.status-box .status-title {
+  font-size: 30px;
+  color: #329fa2; }
+  @media (min-width: 1400px) {
+    .status-box .status-title {
+      font-size: 40px; } }
+
 .loading-cover {
   height: 100%;
   width: 100%;
@@ -35,6 +48,9 @@
 .qa-container .question {
   height: 120px;
   font-size: 25px; }
+  @media (min-width: 1400px) {
+    .qa-container .question {
+      font-size: 35spx; } }
 .qa-container .answer {
   height: 150px; }
   .qa-container .answer .ans1, .qa-container .answer .ans2, .qa-container .answer .ans3, .qa-container .answer .ans4 {
@@ -48,9 +64,13 @@
     background-color: transparent;
     color: white;
     transition: all 0.2s linear; }
-    .qa-container .answer .ans1:hover, .qa-container .answer .ans2:hover, .qa-container .answer .ans3:hover, .qa-container .answer .ans4:hover {
+    .qa-container .answer .ans1:focus, .qa-container .answer .ans2:focus, .qa-container .answer .ans3:focus, .qa-container .answer .ans4:focus {
       background-color: white;
       color: #329fa2; }
+    @media (min-width: 1400px) {
+      .qa-container .answer .ans1, .qa-container .answer .ans2, .qa-container .answer .ans3, .qa-container .answer .ans4 {
+        margin-top: 50px;
+        font-size: 25px; } }
 
 .center {
   position: absolute;
