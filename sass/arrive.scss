@@ -13,11 +13,11 @@
     .game-taiwan {
         width: 70px;
         @media (min-width: 1400px) {
-            margin-top: 90px;
+            width: 90px;
         }
     }
     @media (min-width: 1400px) {
-        margin-top: 60px;
+        font-size: 60px;
     }
 }
 .arrive-title {
@@ -25,7 +25,7 @@
     margin-top: 30px;
     text-align: center;
     @media (min-width: 1400px) {
-        margin-top: 50px;
+        font-size: 50px;
     }
 }
 .arrive-time {
@@ -34,7 +34,7 @@
     margin-top: 30px;
     text-align: center;
     @media (min-width: 1400px) {
-        margin-top: 50px;
+        font-size: 50px;
     }
 }
 .arrive-waiting {
@@ -45,7 +45,7 @@
         display: none;
     }
     @media (min-width: 1400px) {
-        margin-top: 40px;
+        font-size: 40px;
     }
 }
 .spinner {
