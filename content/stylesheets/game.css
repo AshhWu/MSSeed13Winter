@@ -64,7 +64,7 @@
     background-color: transparent;
     color: white;
     transition: all 0.2s linear; }
-    .qa-container .answer .ans1:focus, .qa-container .answer .ans1:hover, .qa-container .answer .ans2:focus, .qa-container .answer .ans2:hover, .qa-container .answer .ans3:focus, .qa-container .answer .ans3:hover, .qa-container .answer .ans4:focus, .qa-container .answer .ans4:hover {
+    .qa-container .answer .ans1:active, .qa-container .answer .ans2:active, .qa-container .answer .ans3:active, .qa-container .answer .ans4:active {
       background-color: white;
       color: #329fa2; }
     @media (min-width: 1400px) {
