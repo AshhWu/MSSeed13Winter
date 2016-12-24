@@ -50,7 +50,7 @@
   font-size: 25px; }
   @media (min-width: 1400px) {
     .qa-container .question {
-      font-size: 35spx; } }
+      font-size: 35px; } }
 .qa-container .answer {
   height: 150px; }
   .qa-container .answer .ans1, .qa-container .answer .ans2, .qa-container .answer .ans3, .qa-container .answer .ans4 {
