@@ -4,14 +4,12 @@
     #myCanvas {
       margin: 50px 30px; } }
 
-.status-box {
-  display: none; }
-  .status-box .status-title {
-    font-size: 30px;
-    color: #329fa2; }
-    @media (min-width: 1400px) {
-      .status-box .status-title {
-        font-size: 40px; } }
+.status-box .status-title {
+  font-size: 30px;
+  color: #329fa2; }
+  @media (min-width: 1400px) {
+    .status-box .status-title {
+      font-size: 40px; } }
 
 .loading-cover {
   height: 100%;
@@ -43,6 +41,7 @@
   .qa-container .col-lg-2 {
     width: 80px; }
   .qa-container .response-box {
+    display: none;
     color: white;
     font-size: 18px;
     margin-top: 20px;

@@ -5,7 +5,6 @@
 	}
 }
 .status-box {
-	display: none;
 	.status-title {
 		font-size: 30px;
 		color: #329fa2;
@@ -47,6 +46,7 @@
         width: 80px;
     }
 	.response-box {
+		display: none;
 		color: white;
 		font-size: 18px;
 		margin-top: 20px;
