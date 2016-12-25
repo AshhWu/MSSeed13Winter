@@ -56,10 +56,10 @@
 			font-size: 50px;
 		}
 		.correct-or-not {
-			-vendor-animation-duration: 3s;
+			-webkit-animation-duration: 3s;
 		}
 		.right-answer {
-			-vendor-animation-duration: 5s;
+			-webkit-animation-duration: 5s;
 			display: none;
 		}
 	}
