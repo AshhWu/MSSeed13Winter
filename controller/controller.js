@@ -153,7 +153,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         if(yourAns == $scope.ans){
             $scope.score++;
             console.log($scope.score);
-            console.log("Hit! Answer is correct! score:%d index=%d", $scope.$score, $scope.index);
+            console.log("Hit! Answer is correct! score:%d", $scope.$score);
         }
         else{
             if($scope.score)
