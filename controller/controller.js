@@ -161,7 +161,8 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             console.log("Oh! Answer is wrong");
             $('.co-wr').html("Wrong!");
         }
-        $('.r-ans').html($scope.questions[$scope.index][$scope.ans+1]);
+        $scope.ans++;
+        $('.r-ans').html($scope.questions[$scope.index][$scope.ans]);
         $scope.index++;
         $scope.questionTitle = $scope.questions[$scope.index][1];
         $scope.A = $scope.questions[$scope.index][2];
