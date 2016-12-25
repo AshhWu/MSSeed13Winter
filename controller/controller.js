@@ -152,6 +152,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         clearInterval($scope.refreshIntervalId);
         if(yourAns == $scope.ans){
             $scope.score++;
+            console.log($scope.score);
             console.log("Hit! Answer is correct! score:%d index=%d", $scope.$score, $scope.index);
         }
         else{
