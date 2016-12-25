@@ -40,28 +40,12 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.score = 0;
     $scope.rightCounts = 0;
     $scope.refreshIntervalId = 0;
-    switch ($scope.score) {
-        case 0:
-            $scope.challenge = $scope.challenge_a[0];
-            break;
-        case 1:
-            $scope.challenge = $scope.challenge_a[1];
-            break;
-        case 2:
-            $scope.challenge = $scope.challenge_a[2];
-            break;
-        case 3:
-            $scope.challenge = $scope.challenge_a[3];
-            break;
-        case 4:
-            $scope.challenge = $scope.challenge_a[4];
-            break;
-        default:
-    }
     $scope.checkPass = function() {
         if ($scope.password == $scope.password_a[1]){
             $('.challenge-question').css('display', 'none');
             $('.real-question').css('display', 'block');
+            counter_60s();
+            resetTimer();
         }
         else {
             console.log("Wrong Password!!");
@@ -87,7 +71,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 resetTimer();
             })
     };
-
     function counter_60s(){
         clearInterval(timer);
         $('#count').html(60);
@@ -111,7 +94,41 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             $('#r-half').addClass("r-half-animation");
         }, 10)
     }
-
+    $scope.checkChallenge = function () {
+        switch ($scope.score) {
+            case 1:
+                $scope.challenge = $scope.challenge_a[0];
+                $('.circle').css('display', 'none');
+                $('.challenge-question').css('display', 'block');
+                $('.real-question').css('display', 'none');
+                break;
+            case 2:
+                $scope.challenge = $scope.challenge_a[1];
+                $('.circle').css('display', 'none');
+                $('.challenge-question').css('display', 'block');
+                $('.real-question').css('display', 'none');
+                break;
+            case 3:
+                $scope.challenge = $scope.challenge_a[2];
+                $('.circle').css('display', 'none');
+                $('.challenge-question').css('display', 'block');
+                $('.real-question').css('display', 'none');
+                break;
+            case 4:
+                $scope.challenge = $scope.challenge_a[3];
+                $('.circle').css('display', 'none');
+                $('.challenge-question').css('display', 'block');
+                $('.real-question').css('display', 'none');
+                break;
+            case 5:
+                $scope.challenge = $scope.challenge_a[4];
+                $('.circle').css('display', 'none');
+                $('.challenge-question').css('display', 'block');
+                $('.real-question').css('display', 'none');
+                break;
+            default:
+        }
+    }
     $scope.clickNext = function(yourAns){
         counter_60s();
         resetTimer();
