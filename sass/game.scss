@@ -55,6 +55,7 @@
         }
     }
 	.challenge-question {
+		display: none;
 		position: absolute;
 		top: 25%;
 		text-align: center;
@@ -78,7 +79,6 @@
 		}
 	}
 	.real-question {
-		display: none;
 		.question {
 	        height: 120px;
 	        font-size: 25px;
