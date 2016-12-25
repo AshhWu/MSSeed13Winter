@@ -95,6 +95,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         }, 10)
     }
     $scope.checkChallenge = function () {
+        console.log("Score: "+$scope.score);
         switch ($scope.score) {
             case 1:
                 $scope.challenge = $scope.challenge_a[0];
