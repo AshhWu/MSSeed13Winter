@@ -31,11 +31,42 @@ app.controller('prepareController', ['$scope', '$http', '$window', function($sco
 
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
+    $scope.challenge_a = ["請跟所有組員互相自我介紹","請跟所有組員合照一張", "請所有組員一起上台唱一首歌", "請所有組員各自對自己的隊輔說一句話", "請組員依序發表自己有興趣的職位並簡單說明原因"];
+    $scope.challenge = "";
+    $scope.password_a = ["sayhello", "smile", "singtogether", "告白", "微軟好棒"];
+    $scope.password = "";
     $scope.questions = [];
     $scope.index = 0;
     $scope.score = 0;
+    $scope.rightCounts = 0;
     $scope.refreshIntervalId = 0;
-    console.log($scope.questionTitle);
+    switch ($scope.score) {
+        case 0:
+            $scope.challenge = $scope.challenge_a[0];
+            break;
+        case 1:
+            $scope.challenge = $scope.challenge_a[1];
+            break;
+        case 2:
+            $scope.challenge = $scope.challenge_a[2];
+            break;
+        case 3:
+            $scope.challenge = $scope.challenge_a[3];
+            break;
+        case 4:
+            $scope.challenge = $scope.challenge_a[4];
+            break;
+        default:
+    }
+    $scope.checkPass = function() {
+        if ($scope.password == $scope.password_a[1]){
+            $('.challenge-question').css('display', 'none');
+            $('.real-question').css('display', 'block');
+        }
+        else {
+            console.log("Wrong Password!!");
+        }
+    }
     $scope.getQuestions = function(){
         $http.get('../model/getAllQuestions.php')
             .then(function(response){

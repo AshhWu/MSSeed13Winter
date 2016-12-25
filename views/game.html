@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="../content/stylesheets/mapStyle.css" />
 </head>
 <body ng-controller="gameController" data-ng-init="getQuestions()">
-    <div class="loading-cover">
+    <!--<div class="loading-cover">
         <div class="loading-title"></div>
-    </div>
+    </div>-->
     <div class="header-container">
         <div class="header-title">
             微。跡<img class="header-logo" src="../images/taiwan-1.png" hspace="10">
@@ -50,7 +50,14 @@
                     <div id="r-half" class="r-half-animation"></div>
                 </div>
             </div>
-            <div class="col-lg-9 col-lg-offset-1">
+            <div class="col-lg-6 col-lg-offset-2 challenge-question">
+                <div class="challenge" ng-bind="challenge"></div>
+                <div class="password-box">
+                    <input type="text" size="14" name="team" class="password" placeholder="請輸入通關密語" ng-model="password"><br>
+    				<button class="pass-btn" ng-click="checkPass()">送出</button>
+                </div>
+            </div>
+            <div class="col-lg-9 col-lg-offset-1 real-question">
                 <div class="question"><span style="font-size: 40px;">Q: </span>{{questionTitle}}</div>
                 <div class="answer">
                     <button class="col-lg-5 ans1" ng-click="clickNext(1)">{{A}}</button>
