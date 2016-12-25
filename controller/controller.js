@@ -105,6 +105,30 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             $scope.score++;
             $('.co-wr').html("Correct!");
             console.log("Hit! Answer is correct!");
+        }
+        else{
+            if($scope.score)
+                $scope.score--;
+            console.log("Oh! Answer is wrong");
+            $('.co-wr').html("Wrong!");
+        }
+        $scope.ans++;
+        $('.r-ans').html($scope.questions[$scope.index][$scope.ans]);
+        $('.real-question').css('display', 'none');
+        $('.response-box').css('display', 'block');
+        $('.correct-or-not').addClass('animated slideInLeft');
+        $('.correct-or-not').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $('.right-answer').css('display', 'block');
+            $('.right-answer').addClass('animated slideInLeft');
+        });
+        $('.right-answer').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $('.correct-or-not').removeClass('animated');
+            $('.right-answer').removeClass('animated');
+            $('.correct-or-not').removeClass('slideInLeft');
+            $('.right-answer').removeClass('slideInLeft');
+            $('.response-box').css('display', 'none');
+            $('.real-question').css('display', 'block');
+            $('.right-answer').css('display', 'none');
             switch ($scope.score) {
                 case 5:
                     if ($scope.chIndex == -1) {
@@ -153,30 +177,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     break;
                 default:
             }
-        }
-        else{
-            if($scope.score)
-                $scope.score--;
-            console.log("Oh! Answer is wrong");
-            $('.co-wr').html("Wrong!");
-        }
-        $scope.ans++;
-        $('.r-ans').html($scope.questions[$scope.index][$scope.ans]);
-        $('.real-question').css('display', 'none');
-        $('.response-box').css('display', 'block');
-        $('.correct-or-not').addClass('animated slideInLeft');
-        $('.correct-or-not').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-            $('.right-answer').css('display', 'block');
-            $('.right-answer').addClass('animated slideInLeft');
-        });
-        $('.right-answer').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-            $('.correct-or-not').removeClass('animated');
-            $('.right-answer').removeClass('animated');
-            $('.correct-or-not').removeClass('slideInLeft');
-            $('.right-answer').removeClass('slideInLeft');
-            $('.response-box').css('display', 'none');
-            $('.real-question').css('display', 'block');
-            $('.right-answer').css('display', 'none');
         });
         $scope.index++;
         $scope.questionTitle = $scope.questions[$scope.index][1];
