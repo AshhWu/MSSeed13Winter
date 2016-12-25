@@ -173,6 +173,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     break;
                 default:
             }
+            $scope.$apply();
             $('.correct-or-not').removeClass('animated');
             $('.right-answer').removeClass('animated');
             $('.correct-or-not').removeClass('slideInLeft');
