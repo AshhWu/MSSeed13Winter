@@ -35,13 +35,14 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.challenge = "";
     $scope.password_a = ["sayhello", "smile", "singtogether", "告白", "微軟好棒"];
     $scope.password = "";
+    $scope.chIndex = 0;
     $scope.questions = [];
     $scope.index = 0;
     $scope.score = 0;
     $scope.rightCounts = 0;
     $scope.refreshIntervalId = 0;
     $scope.checkPass = function() {
-        if ($scope.password == $scope.password_a[1]){
+        if ($scope.password == $scope.password_a[$scope.chIndex]){
             $('.challenge-question').css('display', 'none');
             $('.real-question').css('display', 'block');
             counter_60s();
@@ -97,31 +98,42 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.clickNext = function(yourAns){
 
         switch ($scope.score) {
+            console.log($scope.score);
             case 1:
+                console.log(0);
+                $scope.chIndex = 0;
                 $scope.challenge = $scope.challenge_a[0];
                 $('.circle').css('display', 'none');
                 $('.challenge-question').css('display', 'block');
                 $('.real-question').css('display', 'none');
                 break;
             case 2:
+                console.log(1);
+                $scope.chIndex = 1;
                 $scope.challenge = $scope.challenge_a[1];
                 $('.circle').css('display', 'none');
                 $('.challenge-question').css('display', 'block');
                 $('.real-question').css('display', 'none');
                 break;
             case 3:
+                console.log(2);
+                $scope.chIndex = 2;
                 $scope.challenge = $scope.challenge_a[2];
                 $('.circle').css('display', 'none');
                 $('.challenge-question').css('display', 'block');
                 $('.real-question').css('display', 'none');
                 break;
             case 4:
+                console.log(3);
+                $scope.chIndex = 3;
                 $scope.challenge = $scope.challenge_a[3];
                 $('.circle').css('display', 'none');
                 $('.challenge-question').css('display', 'block');
                 $('.real-question').css('display', 'none');
                 break;
             case 5:
+                console.log(4);
+                $scope.chIndex = 4;
                 $scope.challenge = $scope.challenge_a[4];
                 $('.circle').css('display', 'none');
                 $('.challenge-question').css('display', 'block');
