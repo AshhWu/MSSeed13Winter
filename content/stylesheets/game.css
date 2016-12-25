@@ -41,14 +41,17 @@
   .qa-container .col-lg-2 {
     width: 80px; }
   .qa-container .response-box {
+    position: absolute;
+    top: 35%;
     display: none;
     color: white;
-    font-size: 18px;
     margin-top: 20px;
     line-height: 40px; }
     @media (min-width: 1400px) {
       .qa-container .response-box {
-        font-size: 25px; } }
+        font-size: 50px; } }
+    .qa-container .response-box .right-answer {
+      display: none; }
   .qa-container .timer-box {
     margin-top: 30px;
     text-align: center;

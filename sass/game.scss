@@ -46,13 +46,17 @@
         width: 80px;
     }
 	.response-box {
+		position: absolute;
+		top: 35%;
 		display: none;
 		color: white;
-		font-size: 18px;
 		margin-top: 20px;
 		line-height: 40px;
 		@media (min-width: 1400px) {
-			font-size: 25px;
+			font-size: 50px;
+		}
+		.right-answer {
+			display: none;
 		}
 	}
     .timer-box {

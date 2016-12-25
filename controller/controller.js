@@ -166,6 +166,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         $('.response-box').css('display', 'block');
         $('.correct-or-not').addClass('animated slideInLeft');
         $('.correct-or-not').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $('.right-answer').css('display', 'block');
             $('.right-answer').addClass('animated slideInLeft');
         });
         $('.right-answer').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
