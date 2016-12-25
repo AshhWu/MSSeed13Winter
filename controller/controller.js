@@ -98,8 +98,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         }, 10)
     }
     $scope.clickNext = function(yourAns){
-        counter_60s();
-        resetTimer();
         clearInterval($scope.refreshIntervalId);
         if(yourAns == $scope.ans){
             $scope.score++;
@@ -122,13 +120,10 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             $('.right-answer').addClass('animated slideInLeft');
         });
         $('.right-answer').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-            $('.correct-or-not').removeClass('animated');
-            $('.right-answer').removeClass('animated');
-            $('.correct-or-not').removeClass('slideInLeft');
-            $('.right-answer').removeClass('slideInLeft');
             $('.response-box').css('display', 'none');
             $('.real-question').css('display', 'block');
-            $('.right-answer').css('display', 'none');
+            counter_60s();
+            resetTimer();
             switch ($scope.score) {
                 case 5:
                     if ($scope.chIndex == -1) {
@@ -177,6 +172,11 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     break;
                 default:
             }
+            $('.correct-or-not').removeClass('animated');
+            $('.right-answer').removeClass('animated');
+            $('.correct-or-not').removeClass('slideInLeft');
+            $('.right-answer').removeClass('slideInLeft');
+            $('.right-answer').css('display', 'none');
         });
         $scope.index++;
         $scope.questionTitle = $scope.questions[$scope.index][1];
