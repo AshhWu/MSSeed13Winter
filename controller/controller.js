@@ -94,8 +94,28 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             $('#r-half').addClass("r-half-animation");
         }, 10)
     }
-    $scope.checkChallenge = function () {
-        console.log("Score: "+$scope.score);
+    $scope.clickNext = function(yourAns){
+        counter_60s();
+        resetTimer();
+        clearInterval($scope.refreshIntervalId);
+        if(yourAns == $scope.ans){
+            $scope.score++;
+            console.log("Hit! Answer is correct! score:%d index=%d", $scope.$score, $scope.index);
+        }
+        else{
+            if($scope.score)
+                $scope.score--;
+            console.log("Oh! Answer is wrong");
+
+        }
+        $scope.index++;
+        $scope.questionTitle = $scope.questions[$scope.index][1];
+        $scope.A = $scope.questions[$scope.index][2];
+        $scope.B = $scope.questions[$scope.index][3];
+        $scope.C = $scope.questions[$scope.index][4];
+        $scope.D = $scope.questions[$scope.index][5];
+        $scope.ans = $scope.questions[$scope.index][6];
+        move($scope.score);
         switch ($scope.score) {
             case 1:
                 $scope.challenge = $scope.challenge_a[0];
@@ -129,29 +149,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 break;
             default:
         }
-    }
-    $scope.clickNext = function(yourAns){
-        counter_60s();
-        resetTimer();
-        clearInterval($scope.refreshIntervalId);
-        if(yourAns == $scope.ans){
-            $scope.score++;
-            console.log("Hit! Answer is correct! score:%d index=%d", $scope.$score, $scope.index);
-        }
-        else{
-            if($scope.score)
-                $scope.score--;
-            console.log("Oh! Answer is wrong");
-
-        }
-        $scope.index++;
-        $scope.questionTitle = $scope.questions[$scope.index][1];
-        $scope.A = $scope.questions[$scope.index][2];
-        $scope.B = $scope.questions[$scope.index][3];
-        $scope.C = $scope.questions[$scope.index][4];
-        $scope.D = $scope.questions[$scope.index][5];
-        $scope.ans = $scope.questions[$scope.index][6];
-        move($scope.score);
     }
 
 
