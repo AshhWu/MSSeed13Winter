@@ -112,6 +112,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         }
         $scope.ans++;
         $('.r-ans').html($scope.questions[$scope.index][$scope.ans]);
+        $('.circle').css('display', 'none');
         $('.real-question').css('display', 'none');
         $('.response-box').css('display', 'block');
         $('.correct-or-not').addClass('animated slideInLeft');
@@ -120,6 +121,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             $('.right-answer').addClass('animated slideInLeft');
         });
         $('.right-answer').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $('.circle').css('display', 'block');
             $('.response-box').css('display', 'none');
             $('.real-question').css('display', 'block');
             counter_60s();
@@ -188,6 +190,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         $scope.D = $scope.questions[$scope.index][5];
         $scope.ans = $scope.questions[$scope.index][6];
         move($scope.score);
+        $scope.$apply();
     }
 
 
