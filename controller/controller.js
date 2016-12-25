@@ -96,9 +96,8 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         }, 10)
     }
     $scope.clickNext = function(yourAns){
-
+        console.log($scope.score);
         switch ($scope.score) {
-            console.log($scope.score);
             case 1:
                 console.log(0);
                 $scope.chIndex = 0;
