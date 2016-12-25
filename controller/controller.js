@@ -98,13 +98,24 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         }, 10)
     }
     $scope.clickNext = function(yourAns){
-
         counter_60s();
         resetTimer();
         clearInterval($scope.refreshIntervalId);
         if(yourAns == $scope.ans){
             $scope.score++;
+            $('.real-question').css('display', 'none');
+            $('.response-box').css('display', 'block');
             $('.co-wr').html("Correct!");
+            $('.correct-or-not').addClass('animated slideInLeft');
+            $('.right-answer').addClass('animated slideInLeft');
+            $('.right-answer').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $('.correct-or-not').removeClass('animated');
+                $('.right-answer').removeClass('animated');
+                $('.correct-or-not').removeClass('slideInLeft');
+                $('.right-answer').removeClass('slideInLeft');
+                $('.response-box').css('display', 'none');
+                $('.real-question').css('display', 'block');
+            });
             console.log("Hit! Answer is correct!");
             switch ($scope.score) {
                 case 5:
