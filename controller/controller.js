@@ -98,66 +98,70 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         }, 10)
     }
     $scope.clickNext = function(yourAns){
-        switch ($scope.score) {
-            case 4:
-                if ($scope.chIndex == -1) {
-                    $scope.chIndex = 0;
-                    $scope.challenge = $scope.challenge_a[0];
-                    $('.circle').css('display', 'none');
-                    $('.challenge-question').css('display', 'block');
-                    $('.real-question').css('display', 'none');
-                }
-                break;
-            case 9:
-                if ($scope.chIndex == 0) {
-                    $scope.chIndex = 1;
-                    $scope.challenge = $scope.challenge_a[1];
-                    $('.circle').css('display', 'none');
-                    $('.challenge-question').css('display', 'block');
-                    $('.real-question').css('display', 'none');
-                }
-                break;
-            case 14:
-                if ($scope.chIndex == 1) {
-                    $scope.chIndex = 2;
-                    $scope.challenge = $scope.challenge_a[2];
-                    $('.circle').css('display', 'none');
-                    $('.challenge-question').css('display', 'block');
-                    $('.real-question').css('display', 'none');
-                }
-                break;
-            case 19:
-                if ($scope.chIndex == 2) {
-                    $scope.chIndex = 3;
-                    $scope.challenge = $scope.challenge_a[3];
-                    $('.circle').css('display', 'none');
-                    $('.challenge-question').css('display', 'block');
-                    $('.real-question').css('display', 'none');
-                }
-                break;
-            case 24:
-                if ($scope.chIndex == 3) {
-                    $scope.chIndex = 4;
-                    $scope.challenge = $scope.challenge_a[4];
-                    $('.circle').css('display', 'none');
-                    $('.challenge-question').css('display', 'block');
-                    $('.real-question').css('display', 'none');
-                }
-                break;
-            default:
-        }
+
         counter_60s();
         resetTimer();
         clearInterval($scope.refreshIntervalId);
         if(yourAns == $scope.ans){
             $scope.score++;
+            $('.co-wr').html("Correct!");
             console.log("Hit! Answer is correct!");
+            switch ($scope.score) {
+                case 5:
+                    if ($scope.chIndex == -1) {
+                        $scope.chIndex = 0;
+                        $scope.challenge = $scope.challenge_a[0];
+                        $('.circle').css('display', 'none');
+                        $('.challenge-question').css('display', 'block');
+                        $('.real-question').css('display', 'none');
+                    }
+                    break;
+                case 10:
+                    if ($scope.chIndex == 0) {
+                        $scope.chIndex = 1;
+                        $scope.challenge = $scope.challenge_a[1];
+                        $('.circle').css('display', 'none');
+                        $('.challenge-question').css('display', 'block');
+                        $('.real-question').css('display', 'none');
+                    }
+                    break;
+                case 15:
+                    if ($scope.chIndex == 1) {
+                        $scope.chIndex = 2;
+                        $scope.challenge = $scope.challenge_a[2];
+                        $('.circle').css('display', 'none');
+                        $('.challenge-question').css('display', 'block');
+                        $('.real-question').css('display', 'none');
+                    }
+                    break;
+                case 20:
+                    if ($scope.chIndex == 2) {
+                        $scope.chIndex = 3;
+                        $scope.challenge = $scope.challenge_a[3];
+                        $('.circle').css('display', 'none');
+                        $('.challenge-question').css('display', 'block');
+                        $('.real-question').css('display', 'none');
+                    }
+                    break;
+                case 25:
+                    if ($scope.chIndex == 3) {
+                        $scope.chIndex = 4;
+                        $scope.challenge = $scope.challenge_a[4];
+                        $('.circle').css('display', 'none');
+                        $('.challenge-question').css('display', 'block');
+                        $('.real-question').css('display', 'none');
+                    }
+                    break;
+                default:
+            }
         }
         else{
             if($scope.score)
                 $scope.score--;
             console.log("Oh! Answer is wrong");
+            $('.co-wr').html("Wrong!");
         }
+        $('.r-ans').html($scope.ans);
         $scope.index++;
         $scope.questionTitle = $scope.questions[$scope.index][1];
         $scope.A = $scope.questions[$scope.index][2];
