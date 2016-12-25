@@ -51,11 +51,15 @@
 		display: none;
 		color: white;
 		margin-top: 20px;
-		line-height: 40px;
+		line-height: 70px;
 		@media (min-width: 1400px) {
 			font-size: 50px;
 		}
+		.correct-or-not {
+			-vendor-animation-duration: 3s;
+		}
 		.right-answer {
+			-vendor-animation-duration: 5s;
 			display: none;
 		}
 	}

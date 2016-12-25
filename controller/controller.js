@@ -176,6 +176,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             $('.right-answer').removeClass('slideInLeft');
             $('.response-box').css('display', 'none');
             $('.real-question').css('display', 'block');
+            $('.right-answer').css('display', 'none');
         });
         $scope.index++;
         $scope.questionTitle = $scope.questions[$scope.index][1];
