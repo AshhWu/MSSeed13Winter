@@ -129,6 +129,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     if ($scope.chIndex == -1) {
                         $scope.chIndex = 0;
                         $scope.challenge = $scope.challenge_a[0];
+                        console.log($scope.challenge);
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
                         $('.real-question').css('display', 'none');
