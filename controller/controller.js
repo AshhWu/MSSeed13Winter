@@ -35,7 +35,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.challenge = "";
     $scope.password_a = ["sayhello", "smile", "singtogether", "告白", "微軟好棒"];
     $scope.password = "";
-    $scope.chIndex = 10;
+    $scope.chIndex = -1;
     $scope.questions = [];
     $scope.index = 0;
     $scope.score = 0;
@@ -101,7 +101,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.clickNext = function(yourAns){
         switch ($scope.score) {
             case 4:
-                if (chIndex == 10) {
+                if ($scope.chIndex == -1) {
                     $scope.chIndex = 0;
                     $scope.challenge = $scope.challenge_a[0];
                     $('.circle').css('display', 'none');
@@ -110,7 +110,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 }
                 break;
             case 9:
-                if (chIndex == 0) {
+                if ($scope.chIndex == 0) {
                     $scope.chIndex = 1;
                     $scope.challenge = $scope.challenge_a[1];
                     $('.circle').css('display', 'none');
@@ -119,7 +119,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 }
                 break;
             case 14:
-                if (chIndex == 1) {
+                if ($scope.chIndex == 1) {
                     $scope.chIndex = 2;
                     $scope.challenge = $scope.challenge_a[2];
                     $('.circle').css('display', 'none');
@@ -128,7 +128,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 }
                 break;
             case 19:
-                if (chIndex == 2) {
+                if ($scope.chIndex == 2) {
                     $scope.chIndex = 3;
                     $scope.challenge = $scope.challenge_a[3];
                     $('.circle').css('display', 'none');
@@ -137,7 +137,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 }
                 break;
             case 24:
-                if (chIndex == 3) {
+                if ($scope.chIndex == 3) {
                     $scope.chIndex = 4;
                     $scope.challenge = $scope.challenge_a[4];
                     $('.circle').css('display', 'none');
