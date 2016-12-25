@@ -35,7 +35,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.challenge = "";
     $scope.password_a = ["sayhello", "smile", "singtogether", "告白", "微軟好棒"];
     $scope.password = "";
-    $scope.chIndex = 0;
+    $scope.chIndex = -1;
     $scope.questions = [];
     $scope.index = 0;
     $scope.score = 0;
@@ -76,6 +76,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     };
     function counter_60s(){
         clearInterval(timer);
+        $('#count').css('color', 'white');
         $('#count').html(60);
         var n = $('#count').html() - 1;
         timer = setInterval(function() {
@@ -100,39 +101,49 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.clickNext = function(yourAns){
         switch ($scope.score) {
             case 4:
-                $scope.chIndex = 0;
-                $scope.challenge = $scope.challenge_a[0];
-                $('.circle').css('display', 'none');
-                $('.challenge-question').css('display', 'block');
-                $('.real-question').css('display', 'none');
+                if (chIndex == -1) {
+                    $scope.chIndex = 0;
+                    $scope.challenge = $scope.challenge_a[0];
+                    $('.circle').css('display', 'none');
+                    $('.challenge-question').css('display', 'block');
+                    $('.real-question').css('display', 'none');
+                }
                 break;
             case 9:
-                $scope.chIndex = 1;
-                $scope.challenge = $scope.challenge_a[1];
-                $('.circle').css('display', 'none');
-                $('.challenge-question').css('display', 'block');
-                $('.real-question').css('display', 'none');
+                if (chIndex == 0) {
+                    $scope.chIndex = 1;
+                    $scope.challenge = $scope.challenge_a[1];
+                    $('.circle').css('display', 'none');
+                    $('.challenge-question').css('display', 'block');
+                    $('.real-question').css('display', 'none');
+                }
                 break;
             case 14:
-                $scope.chIndex = 2;
-                $scope.challenge = $scope.challenge_a[2];
-                $('.circle').css('display', 'none');
-                $('.challenge-question').css('display', 'block');
-                $('.real-question').css('display', 'none');
+                if (chIndex == 1) {
+                    $scope.chIndex = 2;
+                    $scope.challenge = $scope.challenge_a[2];
+                    $('.circle').css('display', 'none');
+                    $('.challenge-question').css('display', 'block');
+                    $('.real-question').css('display', 'none');
+                }
                 break;
             case 19:
-                $scope.chIndex = 3;
-                $scope.challenge = $scope.challenge_a[3];
-                $('.circle').css('display', 'none');
-                $('.challenge-question').css('display', 'block');
-                $('.real-question').css('display', 'none');
+                if (chIndex == 2) {
+                    $scope.chIndex = 3;
+                    $scope.challenge = $scope.challenge_a[3];
+                    $('.circle').css('display', 'none');
+                    $('.challenge-question').css('display', 'block');
+                    $('.real-question').css('display', 'none');
+                }
                 break;
             case 24:
-                $scope.chIndex = 4;
-                $scope.challenge = $scope.challenge_a[4];
-                $('.circle').css('display', 'none');
-                $('.challenge-question').css('display', 'block');
-                $('.real-question').css('display', 'none');
+                if (chIndex == 3) {
+                    $scope.chIndex = 4;
+                    $scope.challenge = $scope.challenge_a[4];
+                    $('.circle').css('display', 'none');
+                    $('.challenge-question').css('display', 'block');
+                    $('.real-question').css('display', 'none');
+                }
                 break;
             default:
         }
