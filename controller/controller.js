@@ -57,7 +57,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.getQuestions = function(){
         $http.get('../model/getAllQuestions.php')
             .then(function(response){
-                console.log(response);
                 console.log("Get Questions Success!");
                 for(var index in response.data){
                     $scope.questions[index] = response.data[index];
@@ -152,14 +151,12 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         clearInterval($scope.refreshIntervalId);
         if(yourAns == $scope.ans){
             $scope.score++;
-            console.log(typeof $scope.score);
-            console.log("Hit! Answer is correct! score:%d", $scope.$score);
+            console.log("Hit! Answer is correct!");
         }
         else{
             if($scope.score)
                 $scope.score--;
             console.log("Oh! Answer is wrong");
-
         }
         $scope.index++;
         $scope.questionTitle = $scope.questions[$scope.index][1];
