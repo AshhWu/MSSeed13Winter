@@ -35,7 +35,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.challenge = "";
     $scope.password_a = ["sayhello", "smile", "singtogether", "告白", "微軟好棒"];
     $scope.password = "";
-    $scope.chIndex = -1;
+    $scope.chIndex = 10;
     $scope.questions = [];
     $scope.index = 0;
     $scope.score = 0;
@@ -101,7 +101,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.clickNext = function(yourAns){
         switch ($scope.score) {
             case 4:
-                if (chIndex == -1) {
+                if (chIndex == 10) {
                     $scope.chIndex = 0;
                     $scope.challenge = $scope.challenge_a[0];
                     $('.circle').css('display', 'none');
