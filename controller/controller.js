@@ -39,6 +39,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     $scope.questions = [];
     $scope.index = 0;
     $scope.score = 0;
+    $scope.timeOutFlag = 0;
     $scope.rightCounts = 0;
     $scope.refreshIntervalId = 0;
     $scope.checkPass = function() {
@@ -74,12 +75,18 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             })
     };
     function counter_60s(){
-        clearInterval(timer);
+        clearInterval($scope.refreshIntervalId);
         $('#count').css('color', 'white');
         $('#count').html(60);
-        var n = $('#count').html() - 1;
-        timer = setInterval(function() {
-            if (n >= 0) { $('#count').html(n--); }
+        $scope.refreshIntervalId = setInterval(function() {
+            var n = $('#count').html() - 1;
+            if (n < 0){
+                clearInterval($scope.refreshIntervalId);
+                $scope.timeOutFlag = 1;
+                $scope.clickNext(5);
+                return;
+            }
+            if (n >= 0) { $('#count').html(n); }
             if ($('#count').html() <= 30 && $('#count').html() >= 10){
                 $('#count').css('color', '#FF7744');
             } else if ($('#count').html() < 10){
@@ -108,7 +115,10 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             if($scope.score)
                 $scope.score--;
             console.log("Oh! Answer is wrong");
-            $('.co-wr').html("Wrong!");
+            if($scope.timeOutFlag == 1)
+                $('.co-wr').html("Time out!");
+            else
+                $('.co-wr').html("Wrong!");
         }
         $scope.ans++;
         $('.r-ans').html($scope.questions[$scope.index][$scope.ans]);
@@ -191,6 +201,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         $scope.ans = $scope.questions[$scope.index][6];
         move($scope.score);
         $scope.$apply();
+        $scope.timeOutFlag = 0;
     }
 
 
