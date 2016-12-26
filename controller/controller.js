@@ -80,6 +80,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         $('#count').html(60);
         $scope.refreshIntervalId = setInterval(function() {
             var n = $('#count').html() - 1;
+            $scope.timeOutFlag = 0;
             if (n < 0){
                 clearInterval($scope.refreshIntervalId);
                 $scope.timeOutFlag = 1;
