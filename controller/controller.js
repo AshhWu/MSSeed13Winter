@@ -1,5 +1,7 @@
 var app = angular.module('app', []);
 var timer;
+var gameClock;
+var gameFinished = true; //set this to true let game.html locate to gameover page
 app.controller('indexController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = "";
     $scope.postTeamName = function(){
@@ -28,7 +30,13 @@ app.controller('prepareController', ['$scope', '$http', '$window', function($sco
     $scope.teamIndex = $window.sessionStorage.tNum;
     $scope.teamCar = "../images/car" + $scope.teamIndex + ".png";
 }]);
-
+app.controller('gameoverController', ['$scope', '$http', '$window', function($scope, $http, $window){
+    
+	console.log("gameoverC");
+	$scope.score = $window.sessionStorage.score;
+	$scope.time = $window.sessionStorage.time;
+    
+}]);
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
     $scope.challenge_a = ["請跟所有組員互相自我介紹","請跟所有組員合照一張", "請所有組員一起上台唱一首歌", "請所有組員各自對自己的隊輔說一句話", "請組員依序發表自己有興趣的職位並簡單說明原因"];
@@ -94,6 +102,28 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 $('#count').css('color', '#FF0000');
             }
         }, 1000);
+    }
+    function gameTimer(){
+		startTime = new Date();
+		var clock=0;
+		setInterval(function() {
+			var clock = (new Date()-startTime)/1000;
+			var gameClock = getTime(clock.toFixed(0));
+            if (clock.toFixed(0) >= 1200 || gameFinished) { 
+				$window.sessionStorage.time = gameClock;
+				$window.sessionStorage.score = $scope.score;
+				window.location.href="gameover.html";
+			}else{
+				$('#clock').html(gameClock);
+			}            
+        }, 1000);
+	}
+	function getTime(s){
+		var mins = (s/60).toFixed(0);
+		if(mins<10){mins = '0'+mins;}
+		var secs = (s%60).toFixed(0);
+		if(secs<10){secs = '0'+secs;}
+		return mins+":"+secs;
     }
     function resetTimer() {
         $('#count').removeClass("count-animation");
@@ -242,6 +272,7 @@ $(function(){
         else {
             counter_60s();
             resetTimer();
+	    gameTimer();
             $('.loading-cover').css('display', 'none');
             clearInterval(startTimer);
         }
