@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
     <title>微軟寒假分享會</title>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
@@ -30,9 +30,48 @@
             $(".spinner").css("display", "inline-block");
         });
     });
+	$(function(){
+			var wsServer = 'ws://127.0.0.1:8080';
+			var socket = new WebSocket(wsServer);
+			socket.onopen = function (evt) { onOpen(evt) };
+			socket.onclose = function (evt) { onClose(evt) };
+			socket.onmessage = function (evt) { onMessage(evt) };
+			socket.onerror = function (evt) { onError(evt) };
+	});
+	
+	function onOpen(evt) {
+		console.log("socket connected succssful!");
+		isConnect = true;
+	}
+	function onClose(evt) {
+		console.log("Disconnected");
+	}
+	function onMessage(evt) {
+		var data = JSON.parse(evt.data);
+		switch (data.type) {
+			case 'text':
+				window.location.assign("gameover.html");
+				console.log(data.msg);
+				break;
+			case 'num' :
+				console.log(data.msg);
+				break;
+		}
+
+		console.log('Retrieved data from server: ' + evt.data);
+	}
+	function onError(evt) {
+		//console.log('Error occured: ' + evt.data);
+	}
+	function sendMsg() {
+		if(isConnect){
+			ws.send($('input').value);
+			$('input').value = '';
+		}
+	}
     </script>
 </head>
-<body>
+<body ng-controller="arriveController">
     <div class="header-container">
         <div class="header-title">
             微。跡<img class="header-logo" src="../images/taiwan.png" hspace="10">
@@ -47,7 +86,7 @@
                 GAME COMPLETE！
             </div>
             <div class="arrive-time">
-                抵達時間：<span class="team-time">10:30</span>
+                抵達時間：<span class="team-time">{{time}}</span>
             </div>
             <div class="arrive-waiting">
                 <div class="waiting-word">等候遊戲結束</div>
@@ -60,5 +99,7 @@
         </div>
     </div>
     <footer>© Microsoft Corporation. Made by MSSeed 13th.</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="../controller/controller.js"></script>
 </body>
 </html>

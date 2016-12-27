@@ -1,7 +1,7 @@
 var app = angular.module('app', []);
 var timer;
 var gameClock;
-var gameFinished = true; //set this to true let game.html locate to gameover page
+var gameFinished = false; //set this to true let game.html locate to gameover page
 app.controller('indexController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = "";
     $scope.postTeamName = function(){
@@ -30,9 +30,10 @@ app.controller('prepareController', ['$scope', '$http', '$window', function($sco
     $scope.teamIndex = $window.sessionStorage.tNum;
     $scope.teamCar = "../images/car" + $scope.teamIndex + ".png";
 }]);
+app.controller('arriveController', ['$scope', '$http', '$window', function($scope, $http, $window){
+	$scope.time = $window.sessionStorage.time;
+}]);
 app.controller('gameoverController', ['$scope', '$http', '$window', function($scope, $http, $window){
-    
-	console.log("gameoverC");
 	$scope.score = $window.sessionStorage.score;
 	$scope.time = $window.sessionStorage.time;
     
@@ -109,10 +110,10 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
 		setInterval(function() {
 			var clock = (new Date()-startTime)/1000;
 			var gameClock = getTime(clock.toFixed(0));
-            if (clock.toFixed(0) >= 1200 || gameFinished) { 
+            if (clock.toFixed(0) >= 2 || gameFinished) { 
 				$window.sessionStorage.time = gameClock;
 				$window.sessionStorage.score = $scope.score;
-				window.location.href="gameover.html";
+				window.location.href="arrive.html";
 			}else{
 				$('#clock').html(gameClock);
 			}            

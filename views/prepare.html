@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../content/stylesheets/global.css" />
     <link rel="stylesheet" href="../content/stylesheets/prepare.css" />
     <script type="text/javascript">
-         function waiting (){
+        function waiting (){
             $('.loading-cover').css('display', 'block');
 			var wsServer = 'ws://127.0.0.1:8080';
 			var socket = new WebSocket(wsServer);
@@ -27,7 +27,7 @@
             // }, 2000);
         }
 		function onOpen(evt) {
-			console.log("连接服务器成功");
+			console.log("socket connected succssful!");
 			isConnect = true;
 		}
 		function onClose(evt) {
