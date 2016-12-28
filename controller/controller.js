@@ -270,7 +270,7 @@ $(function(){
             $('.loading-cover').css('display', 'none');
             clearInterval(startTimer);
         }
-    }, 1500);
+    }, 1000);
 });
 
 
