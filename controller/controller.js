@@ -40,8 +40,7 @@ app.controller('gameoverController', ['$scope', '$http', '$window', function($sc
 }]);
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
-    $scope.challenge_a = ["請跟所有組員互相自我介紹","請跟所有組員合照一張", "請所有組員一起上台唱一首歌", "請所有組員各自對自己的隊輔說一句話", "請組員依序發表自己有興趣的職位並簡單說明原因"];
-    $scope.challenge = "";
+    $scope.challenge = "突發事件";
     $scope.password_a = ["sayhello", "smile", "singtogether", "告白", "微軟好棒"];
     $scope.password = "";
     $scope.chIndex = -1;
@@ -110,7 +109,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
 		setInterval(function() {
 			var clock = (new Date()-startTime)/1000;
 			var gameClock = getTime(clock.toFixed(0));
-            if (clock.toFixed(0) >= 100 || gameFinished) { 
+            if (clock.toFixed(0) >= 900 || gameFinished) {
 				$window.sessionStorage.time = gameClock;
 				$window.sessionStorage.score = $scope.score;
 				window.location.href="arrive.html";
@@ -172,8 +171,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 case 5:
                     if ($scope.chIndex == -1) {
                         $scope.chIndex = 0;
-                        $scope.challenge = $scope.challenge_a[0];
-                        console.log($scope.challenge);
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
                         $('.real-question').css('display', 'none');
@@ -182,7 +179,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 case 10:
                     if ($scope.chIndex == 0) {
                         $scope.chIndex = 1;
-                        $scope.challenge = $scope.challenge_a[1];
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
                         $('.real-question').css('display', 'none');
@@ -191,7 +187,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 case 15:
                     if ($scope.chIndex == 1) {
                         $scope.chIndex = 2;
-                        $scope.challenge = $scope.challenge_a[2];
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
                         $('.real-question').css('display', 'none');
@@ -200,7 +195,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 case 20:
                     if ($scope.chIndex == 2) {
                         $scope.chIndex = 3;
-                        $scope.challenge = $scope.challenge_a[3];
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
                         $('.real-question').css('display', 'none');
@@ -209,7 +203,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 case 25:
                     if ($scope.chIndex == 3) {
                         $scope.chIndex = 4;
-                        $scope.challenge = $scope.challenge_a[4];
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
                         $('.real-question').css('display', 'none');
