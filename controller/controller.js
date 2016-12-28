@@ -36,7 +36,7 @@ app.controller('arriveController', ['$scope', '$http', '$window', function($scop
 app.controller('gameoverController', ['$scope', '$http', '$window', function($scope, $http, $window){
 	$scope.score = $window.sessionStorage.score;
 	$scope.time = $window.sessionStorage.time;
-    
+
 }]);
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
@@ -110,13 +110,13 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
 		setInterval(function() {
 			var clock = (new Date()-startTime)/1000;
 			var gameClock = getTime(clock.toFixed(0));
-            if (clock.toFixed(0) >= 2 || gameFinished) { 
+            if (clock.toFixed(0) >= 100 || gameFinished) { 
 				$window.sessionStorage.time = gameClock;
 				$window.sessionStorage.score = $scope.score;
 				window.location.href="arrive.html";
 			}else{
 				$('#clock').html(gameClock);
-			}            
+			}
         }, 1000);
 	}
 	function getTime(s){
