@@ -2,6 +2,10 @@
  * Created by admin on 2016/12/30.
  */
 
+window.onload=function()
+{
+    getTeamAndScore();
+};
 
 function getTeamAndScore() {
     var URLs = "../model/getAllCarAndScore.php";//this one
