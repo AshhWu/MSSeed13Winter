@@ -1,6 +1,7 @@
 .main-container {
+    padding-top: 80px;
     @media (min-width: 1400px) {
-        margin-top: 150px;
+        padding-top: 150px;
     }
 }
 .header-title {
