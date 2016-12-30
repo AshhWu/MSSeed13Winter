@@ -1,8 +1,6 @@
-.main-container {
-  margin-top: 80px; }
-  @media (min-width: 1400px) {
-    .main-container {
-      margin-top: 150px; } }
+@media (min-width: 1400px) {
+  .main-container {
+    margin-top: 150px; } }
 
 .header-title {
   color: white; }
