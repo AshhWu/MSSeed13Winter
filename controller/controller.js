@@ -34,9 +34,9 @@ app.controller('arriveController', ['$scope', '$http', '$window', function($scop
 	$scope.time = $window.sessionStorage.time;
 }]);
 app.controller('gameoverController', ['$scope', '$http', '$window', function($scope, $http, $window){
+    $scope.teamName = $window.sessionStorage.tName;
 	$scope.score = $window.sessionStorage.score;
 	$scope.time = $window.sessionStorage.time;
-
 }]);
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
