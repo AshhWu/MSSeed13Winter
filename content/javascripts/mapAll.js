@@ -33,7 +33,8 @@ window.onload=function()
         cxt.drawImage(imgMain,0,0,256,256,370,40,50,50);
     };
 
-    setInterval(function(){getTeamAndScore(); }, 5000);
+    setInterval(function(){getTeamAndScore();
+        countNum();}, 5000);
 };
 
 
