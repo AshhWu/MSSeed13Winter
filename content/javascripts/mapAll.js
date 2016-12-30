@@ -47,15 +47,15 @@ function getTeamAndScore() {
         success: function (data) {
 
             team1= data[0][1];
-            count1=data[0][2];
+            count1=parseInt(data[0][2]);
             team2= data[1][1];
-            count2=2;
+            count2=parseInt(data[1][2]);
             team3= data[2][1];
-            count3=data[2][2];
+            count3=parseInt(data[2][2]);
             team4= data[3][1];
-            count4=data[3][2];
+            count4=parseInt(data[3][2]);
             team5= data[4][1];
-            count5=data[4][2];
+            count5=parseInt(data[4][2]);
 
             countNum();
 
