@@ -49,7 +49,7 @@ function getTeamAndScore() {
             team1= data[0][1];
             count1=data[0][2];
             team2= data[1][1];
-            count2=data[1][2];
+            count2=2;
             team3= data[2][1];
             count3=data[2][2];
             team4= data[3][1];
