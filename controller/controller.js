@@ -41,7 +41,7 @@ app.controller('gameoverController', ['$scope', '$http', '$window', function($sc
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
     $scope.challenge = "突發事件";
-    $scope.password_a = ["sayhello", "smile", "singtogether", "告白", "微軟好棒"];
+    $scope.password_a = ["1", "2", "3", "4", "5"];
     $scope.password = "";
     $scope.chIndex = -1;
     $scope.questions = [];
@@ -425,7 +425,7 @@ function move(count)
             case 30:
                 $scope.cxt.clearRect(460,10,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,461,40,50,50);
-
+                gameFinished = true;
                 break;
             case 31:
                 count=30;
