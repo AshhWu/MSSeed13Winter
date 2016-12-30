@@ -31,9 +31,9 @@ window.onload=function()
     imgMain.onload=function()
     {
         cxt.drawImage(imgMain,0,0,256,256,370,40,50,50);
-        getTeamAndScore();
+        setInterval(function(){getTeamAndScore(); }, 5000);
     };
-    document.getElementById("talkBox").innerHTML=team1+":"+count1+"<br>"+team2+":"+count2+"<br>"+team3+":"+count3+"<br>"+team4+":"+count4+"<br>"+team5+":"+count5;
+
 
 };
 
@@ -53,12 +53,11 @@ function getTeamAndScore() {
             count2=data[1][2];
             team3= data[2][1];
             count3=data[2][2];
-            /*
             team4= data[3][1];
             count4=data[3][2];
             team5= data[4][1];
             count5=data[4][2];
-            */
+
 
         },
         error: function (err) {
