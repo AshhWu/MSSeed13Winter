@@ -11,6 +11,7 @@ $count = 0;
 function user_add_callback($ws) {
 	$data = count($ws->accept);
  	send_to_all($data, 'num', $ws);
+	echo $data.' users connected.';
 	if($data==3)
 	{
 		send_to_all("go",'text',$ws);
@@ -20,6 +21,7 @@ function user_add_callback($ws) {
 
 function close_callback($ws) {
 	$data = count($ws->accept);
+	console.log($data.' users connected.');
 	send_to_all($data, 'num', $ws);
 }
 

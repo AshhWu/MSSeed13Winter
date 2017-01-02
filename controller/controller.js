@@ -109,10 +109,14 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
 		setInterval(function() {
 			var clock = (new Date()-startTime)/1000;
 			var gameClock = getTime(clock.toFixed(0));
-            if (clock.toFixed(0) >= 900 || gameFinished) {
+            if (gameFinished) {
 				$window.sessionStorage.time = gameClock;
 				$window.sessionStorage.score = $scope.score;
 				window.location.href="arrive.html";
+			}else if(clock.toFixed(0) >= 1200){
+				$window.sessionStorage.time = gameClock;
+				$window.sessionStorage.score = $scope.score;
+				window.location.href="gameover.html";
 			}else{
 				$('#clock').html(gameClock);
 			}
