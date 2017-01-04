@@ -1,3 +1,35 @@
+.main-container {
+  padding: 0; }
 
+.map-container {
+  background-color: white; }
+
+.info-container {
+  text-align: center; }
+  .info-container .info-logo .info-logo-title {
+    padding-top: 45px;
+    font-size: 40px; }
+    @media (min-width: 1400px) {
+      .info-container .info-logo .info-logo-title {
+        font-size: 50px;
+        padding-top: 0;
+        padding-bottom: 30px; } }
+  .info-container .logo {
+    position: relative;
+    margin-top: 30px;
+    font-size: 36px; }
+    .info-container .logo .logo-img {
+      animation: floating 3.5s infinite;
+      width: 130px;
+      height: 200px; }
+    @media (min-width: 1400px) {
+      .info-container .logo {
+        font-size: 45px; } }
+  .info-container #talkBox {
+    margin-top: 40px;
+    line-height: 50px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold; }
 
 /*# sourceMappingURL=global_map.css.map */
