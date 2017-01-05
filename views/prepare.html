@@ -16,7 +16,7 @@
     <script type="text/javascript">
         function waiting (){
             $('.loading-cover').css('display', 'block');
-			var wsServer = 'ws://127.0.0.1:8080';
+			var wsServer = 'ws://140.112.107.150:8080';
 			var socket = new WebSocket(wsServer);
 			socket.onopen = function (evt) { onOpen(evt) };
 			socket.onclose = function (evt) { onClose(evt) };
