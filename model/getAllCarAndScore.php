@@ -13,4 +13,4 @@ $_db = new DB();
 $result = $_db->getAllScores();
 
 # JSON-encode the response
-echo $json_response = json_encode($result);
+echo $json_response = json_encode($result, JSON_UNESCAPED_UNICODE);
