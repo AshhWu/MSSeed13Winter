@@ -18,7 +18,7 @@ app.controller('indexController', ['$scope', '$http', '$window', function($scope
 
         request.success(function (data) {
             $window.sessionStorage.tName = $scope.teamName;
-            $window.sessionStorage.tNum = data;
+            $window.sessionStorage.tNum = data.data;
             window.location.href = "../views/prepare.html?name="+$scope.teamName;
         });
     }
