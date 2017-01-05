@@ -5,22 +5,27 @@ var gameFinished = false; //set this to true let game.html locate to gameover pa
 app.controller('indexController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = "";
     $scope.postTeamName = function(){
-        $('.loading-cover').css('display', 'block');
-        console.log("start post!");
-        var request = $http({
-            method: "post",
-            url: "../model/postTeamName.php",
-            data: {
-                name: $scope.teamName
-            },
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-        });
+        if($scope.teamName != ""){
+            $('.loading-cover').css('display', 'block');
+            console.log("start post!");
+            var request = $http({
+                method: "post",
+                url: "../model/postTeamName.php",
+                data: {
+                    name: $scope.teamName
+                },
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            });
 
-        request.success(function (data) {
-            $window.sessionStorage.tName = $scope.teamName;
-            $window.sessionStorage.tNum = data;
-            window.location.href = "../views/prepare.html?name="+$scope.teamName;
-        });
+            request.success(function (data) {
+                $window.sessionStorage.tName = $scope.teamName;
+                $window.sessionStorage.tNum = data;
+                window.location.href = "../views/prepare.html?name="+$scope.teamName;
+            });
+        }
+        else{
+            alert("Please Enter Team Name!");
+        }
     }
 }]);
 
