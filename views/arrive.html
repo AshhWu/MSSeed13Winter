@@ -31,14 +31,14 @@
         });
     });
 	$(function(){
-			var wsServer = 'ws://127.0.0.1:8080';
+			var wsServer = 'ws://140.112.107.150:3000';
 			var socket = new WebSocket(wsServer);
 			socket.onopen = function (evt) { onOpen(evt) };
 			socket.onclose = function (evt) { onClose(evt) };
 			socket.onmessage = function (evt) { onMessage(evt) };
 			socket.onerror = function (evt) { onError(evt) };
 	});
-	
+
 	function onOpen(evt) {
 		console.log("socket connected succssful!");
 		isConnect = true;
