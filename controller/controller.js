@@ -87,6 +87,10 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 resetTimer();
             })
     };
+    function stop_counter_60s() {
+        clearInterval($scope.refreshIntervalId);
+        $('#count').html(60);
+    }
     function counter_60s(){
         clearInterval($scope.refreshIntervalId);
         $('#count').css('color', 'white');
@@ -194,6 +198,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             switch ($scope.score) {
                 case 5:
                     if ($scope.chIndex == -1) {
+                        stop_counter_60s();
                         $scope.chIndex = 0;
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
@@ -202,6 +207,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     break;
                 case 10:
                     if ($scope.chIndex == 0) {
+                        stop_counter_60s();
                         $scope.chIndex = 1;
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
@@ -210,6 +216,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     break;
                 case 15:
                     if ($scope.chIndex == 1) {
+                        stop_counter_60s();
                         $scope.chIndex = 2;
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
@@ -218,6 +225,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     break;
                 case 20:
                     if ($scope.chIndex == 2) {
+                        stop_counter_60s();
                         $scope.chIndex = 3;
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
@@ -226,6 +234,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     break;
                 case 25:
                     if ($scope.chIndex == 3) {
+                        stop_counter_60s();
                         $scope.chIndex = 4;
                         $('.circle').css('display', 'none');
                         $('.challenge-question').css('display', 'block');
