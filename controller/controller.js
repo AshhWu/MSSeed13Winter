@@ -161,6 +161,19 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 $('.co-wr').html("Wrong!");
         }
         $scope.ans++;
+        var request = $http({
+            method: "post",
+            url: "../model/updateScore.php",
+            data: {
+                team: $scope.teamName,
+                score: $scope.score
+            },
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        });
+
+        request.success(function (data) {
+            console.log("Score Updated!")
+        });
         $('.r-ans').html($scope.questions[$scope.index][$scope.ans]);
         $('.circle').css('display', 'none');
         $('.real-question').css('display', 'none');
