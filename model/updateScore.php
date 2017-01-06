@@ -5,5 +5,5 @@
     $_db = new DB();
     echo $request->team;
     echo $request->score;
-    $_db->updateScore($request->team, $request->score);
+    //$_db->updateScore($request->team, $request->score);
 ?>
