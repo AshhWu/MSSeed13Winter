@@ -45,7 +45,7 @@ function getTeamAndScore() {
         type: "post",
         dataType: "json",//回傳資料用json檔
         success: function (data) {
-
+            console.log(data);
             team1= data[0][1];
             count1=parseInt(data[0][2]);
             team2= data[1][1];
