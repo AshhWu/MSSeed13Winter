@@ -46,7 +46,7 @@ app.controller('gameoverController', ['$scope', '$http', '$window', function($sc
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
     $scope.challenge = "突發事件";
-    $scope.password_a = ["1", "2", "3", "4", "5"];
+    $scope.password_a = ["----.", "....-", "..----", "--", "..."];
     $scope.password = "";
     $scope.chIndex = -1;
     $scope.questions = [];
