@@ -170,7 +170,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
             method: "post",
             url: "../model/updateScore.php",
             data: {
-                name: $scope.teamName,
+                team: $window.sessionStorage.tNum,
                 score: $scope.score
             },
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
