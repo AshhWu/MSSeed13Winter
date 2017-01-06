@@ -56,7 +56,7 @@ require_once ("config.php");
                         VALUES ('$num_rows','$name', 0, 0)";
                 $stmt = $this->pdo->prepare($sql);
                 $stmt -> execute();
-                $p_sql = "SELECT * FROM Score ORDER BY team";
+                $p_sql = "SELECT * FROM Score ORDER BY `team`";
                 $stmt = $this->pdo->prepare($p_sql);
                 $stmt -> execute();
                 return $num_rows;
