@@ -40,12 +40,17 @@ require_once ("config.php");
 
         public
             function updateScore($team, $score){
-                $num = (int)$score;
+                /*$num = (int)$score;
                 $sql = "UPDATE Score
                         SET score=" . $num .
                         "WHERE team=" . $team;
                 $stmt = $this->pdo->prepare($sql);
+                $stmt -> execute();*/
+                $pre_sql = "SELECT count(*) FROM Score";
+                $stmt = $this->pdo->prepare($pre_sql);
                 $stmt -> execute();
+                $num_rows =  $stmt -> fetchColumn() + 1;
+                return $num_rows;
             }
         public
             function postTeamName($name){
