@@ -40,9 +40,8 @@ require_once ("config.php");
 
         public
             function updateScore($name, $score){
-                $num = (int)$score;
                 $sql = "UPDATE Score
-                        SET score='$num'
+                        SET score='$score'
                         WHERE name='$name'";
                 $stmt = $this->pdo->prepare($sql);
                 $stmt -> execute();

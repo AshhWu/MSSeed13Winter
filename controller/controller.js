@@ -161,7 +161,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 $('.co-wr').html("Wrong!");
         }
         $scope.ans++;
-
+        console.log($scope.score);
         var request = $http({
             method: "post",
             url: "../model/updateScore.php",
