@@ -3,7 +3,7 @@
     $postdata = file_get_contents("php://input");
     $request = json_decode($postdata);
     $_db = new DB();
-    echo $request->team;
+    echo $request->name;
     echo $request->score;
-    $_db->updateScore($request->team, $request->score);
+    $_db->updateScore($request->name, $request->score);
 ?>
