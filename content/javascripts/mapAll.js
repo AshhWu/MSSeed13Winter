@@ -38,7 +38,7 @@ window.onload=function()
 
 
 function getTeamAndScore() {
-    var URLs = "../model/getAllCarAndScore.php";//this one
+    var URLs = "../../model/getAllCarAndScore.php";//this one
     return $.ajax({
         url: URLs,
         data: null,
