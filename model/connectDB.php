@@ -32,8 +32,7 @@ require_once ("config.php");
 
         public
             function getAllScores(){
-                $sql = "SELECT *
-                        FROM Score";
+                $sql = "SELECT * FROM Score ORDER BY 'team'";
                 $stmt = $this->pdo->query($sql);
                 return $stmt->fetchAll(PDO::FETCH_NUM);
             }
@@ -55,9 +54,6 @@ require_once ("config.php");
                 $sql = "INSERT INTO Score (team, name, score, time)
                         VALUES ('$num_rows','$name', 0, 0)";
                 $stmt = $this->pdo->prepare($sql);
-                $stmt -> execute();
-                $p_sql = "SELECT * FROM Score ORDER BY 'team'";
-                $stmt = $this->pdo->prepare($p_sql);
                 $stmt -> execute();
                 return $num_rows;
             }
