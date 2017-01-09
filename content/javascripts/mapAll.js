@@ -46,17 +46,18 @@ function getTeamAndScore() {
         dataType: "json",//回傳資料用json檔
         success: function (data) {
             console.log(data);
-            team1= data[0][0]['name'];
-            count1=parseInt(data[0][0]['score']);
-            team2= data[0][1]['name'];
-            count2=parseInt(data[0][1]['score']);
-            team3= data[0][2]['name'];
-            count3=parseInt(data[0][2]['score']);
-            team4= data[0][3]['name'];
-            count4=parseInt(data[0][3]['score']);
-            team5= data[0][4]['name'];
-            count5=parseInt(data[0][4]['score']);
-
+            team1= get_object_vars(data[0]['name']);
+            count1=parseInt(get_object_vars(data[0]['score']));
+            /*
+            team2= data[1]['name'];
+            count2=parseInt(data[1]['score']);
+            team3= data[2]['name'];
+            count3=parseInt(data[2]['score']);
+            team4= data[3]['name'];
+            count4=parseInt(data[3]['score']);
+            team5= data[4]['name'];
+            count5=parseInt(data[4]['score']);
+*/
             countNum();
 
         },
