@@ -34,6 +34,7 @@ require_once ("config.php");
             function getAllScores(){
                 $sql = "SELECT * FROM Score ORDER BY 'team'";
                 $stmt = $this->pdo->query($sql);
+                $stmt->execute(array());
                 return $stmt->fetchAll(PDO::FETCH_ASSOC);
             }
 
@@ -49,7 +50,7 @@ require_once ("config.php");
             function postTeamName($name){
                 $pre_sql = "SELECT count(*) FROM Score";
                 $stmt = $this->pdo->prepare($pre_sql);
-                $stmt -> execute(array($name));
+                $stmt -> execute();
                 $num_rows =  $stmt -> fetchColumn() + 1;
                 $sql = "INSERT INTO Score (team, name, score, time)
                         VALUES ('$num_rows','$name', 0, 0)";
@@ -63,8 +64,7 @@ require_once ("config.php");
                         FROM Score
                         WHERE team = ". $index;
                 $stmt = $this->pdo->query($sql);
-                $stmt->execute(array($index));
-                return $stmt->fetchAll(PDO::FETCH_ASSOC);
+                return $stmt->fetchAll(PDO::FETCH_NUM);
             }
         public
             function deleteAllScores(){
