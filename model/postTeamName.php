@@ -4,7 +4,6 @@
     $request = json_decode($postdata);
     $_db = new DB();
     $name = utf8_encode($request->name);
-    $N=iconv("UTF-8", "GB2312", $request->name);
-    $result = $_db->postTeamName($N);
+    $result = $_db->postTeamName($name);
     echo $json_response = json_encode($result, JSON_UNESCAPED_UNICODE);
 ?>
