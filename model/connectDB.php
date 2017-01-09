@@ -63,7 +63,7 @@ require_once ("config.php");
                         FROM Score
                         WHERE team = ". $index;
                 $stmt = $this->pdo->query($sql);
-                return $stmt->fetchAll(PDO::FETCH_NUM);
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);
             }
         public
             function deleteAllScores(){

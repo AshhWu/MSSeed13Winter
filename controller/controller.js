@@ -321,142 +321,124 @@ function move(count)
 
                 break;
             case 1:
-                $scope.cxt.clearRect(461,40,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,445,90,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,445,90,50,50);
 
                 break;
             case 2:
-                $scope.cxt.clearRect(445,90,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,380,65,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,380,65,50,50);
 
                 break;
             case 3:
-                $scope.cxt.clearRect(380,65,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,380,140,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,380,140,50,50);
 
                 break;
             case 4:
-                $scope.cxt.clearRect(380,140,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,335,115,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,335,115,50,50);
 
                 break;
             case 5:
-                $scope.cxt.clearRect(335,115,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,325,160,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,325,160,50,50);
 
                 break;
             case 6:
-                $scope.cxt.clearRect(325,160,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,380,225,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,380,225,50,50);
 
                 break;
             case 7:
-                $scope.cxt.clearRect(380,225,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,300,250,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,300,250,50,50);
 
                 break;
             case 8:
-                $scope.cxt.clearRect(300,250,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,370,270,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,370,270,50,50);
 
                 break;
             case 9:
-                $scope.cxt.clearRect(370,270,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,320,340,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,320,340,50,50);
 
                 break;
             case 10:
-                $scope.cxt.clearRect(320,340,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,240,300,50,50);
+                $scope.cxt.drawImage(imgMain,0,0,256,256,240,300,50,50);
 
                 break;
             case 11:
-                $scope.cxt.clearRect(240,300,50,50); $scope.cxt.drawImage(imgMain,0,0,256,256,220,360,50,50);
+                $$scope.cxt.drawImage(imgMain,0,0,256,256,220,360,50,50);
 
                 break;
             case 12:
-                $scope.cxt.clearRect(220,360,50,50); c.style.backgroundImage="url('../images/map2.jpg')";
+                c.style.backgroundImage="url('../images/map2.jpg')";
                 $scope.cxt.drawImage(imgMain,0,0,256,256,270,-10,50,50);
 
                 break;
             case 13:
-                $scope.cxt.clearRect(270,-10,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,230,-10,50,50);
 
                 break;
             case 14:
-                $scope.cxt.clearRect(230,-10,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,200,50,50,50);
 
                 break;
             case 15:
-                $scope.cxt.clearRect(200,50,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,280,70,50,50);
 
                 break;
             case 16:
-                $scope.cxt.clearRect(280,70,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,200,140,50,50);
 
                 break;
             case 17:
-                $scope.cxt.clearRect(200,140,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,260,170,50,50);
 
                 break;
             case 18:
-                $scope.cxt.clearRect(260,170,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,280,250,50,50);
 
                 break;
             case 19:
-                $scope.cxt.clearRect(280,250,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,300,300,50,50);
 
                 break;
             case 20:
-                $scope.cxt.clearRect(300,300,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,315,190,50,50);
 
                 break;
             case 21:
-                $scope.cxt.clearRect(315,190,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,340,140,50,50);
 
                 break;
             case 22:
-                $scope.cxt.clearRect(340,140,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,360,80,50,50);
 
                 break;
             case 23:
-                $scope.cxt.clearRect(360,80,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,390,0,50,50);
 
                 break;
             case 24:
-                $scope.cxt.clearRect(390,0,50,50);
                 c.style.backgroundImage="url('../images/map1.jpg')";
                 $scope.cxt.drawImage(imgMain,0,0,256,256,420,350,50,50);
 
                 break;
             case 25:
-                $scope.cxt.clearRect(420,350,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,440,270,50,50);
 
                 break;
             case 26:
-                $scope.cxt.clearRect(440,270,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,470,150,50,50);
 
                 break;
             case 27:
-                $scope.cxt.clearRect(470,150,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,500,65,50,50);
 
                 break;
             case 28:
-                $scope.cxt.clearRect(500,65,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,495,45,50,50);
 
                 break;
             case 29:
-                $scope.cxt.clearRect(495,45,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,460,10,50,50);
 
                 break;
             case 30:
-                $scope.cxt.clearRect(460,10,50,50);
                 $scope.cxt.drawImage(imgMain,0,0,256,256,461,40,50,50);
                 gameFinished = true;
                 break;
