@@ -35,7 +35,7 @@ require_once ("config.php");
                 $sql = "SELECT * FROM Score ORDER BY 'team'";
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute(array());
-                $teamData= $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $teamData= $stmt->fetchAll(PDO::FETCH_NUM);
              return $teamData;//用$dataArray格式會錯誤
             }
 
