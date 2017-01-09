@@ -33,9 +33,24 @@ require_once ("config.php");
         public
             function getAllScores(){
                 $sql = "SELECT * FROM Score ORDER BY 'team'";
-                $stmt = $this->pdo->query($sql);
+                $stmt = $this->pdo->prepare($sql);
                 $stmt->execute(array());
-                return $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $teamData= $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                if ($stmt) {
+                    foreach ($teamData as $data) {
+                    $dataArray[$data['team']] = array(
+                        'team' => $data['team'],
+                        'name' => $data['name'],
+                        'score' => $data['score'],
+                        'time' => $data['time']
+                        );
+                    }
+                }
+
+                $stmt = null;
+
+             echo json_encode($teamData);//用$dataArray格式會錯誤
             }
 
         public
