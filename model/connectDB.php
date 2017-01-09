@@ -36,20 +36,6 @@ require_once ("config.php");
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute(array());
                 $teamData= $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                if ($stmt) {
-                    foreach ($teamData as $data) {
-                    $dataArray[$data['team']] = array(
-                        'team' => $data['team'],
-                        'name' => $data['name'],
-                        'score' => $data['score'],
-                        'time' => $data['time']
-                        );
-                    }
-                }
-
-                $stmt = null;
-
              return $teamData;//用$dataArray格式會錯誤
             }
 
