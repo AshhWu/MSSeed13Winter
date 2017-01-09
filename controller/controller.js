@@ -14,7 +14,7 @@ app.controller('indexController', ['$scope', '$http', '$window', function($scope
                 data: {
                     name: $scope.teamName
                 },
-                headers: { 'Content-Transfer-Encoding': 'application/json ; charset=UTF-8' }
+                headers: { 'Content-Transfer-Encoding': 'utf-8' }
             });
 
             request.success(function (data) {
