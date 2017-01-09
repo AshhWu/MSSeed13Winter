@@ -50,7 +50,7 @@ require_once ("config.php");
 
                 $stmt = null;
 
-             echo json_encode($teamData);//用$dataArray格式會錯誤
+             return $teamData;//用$dataArray格式會錯誤
             }
 
         public
