@@ -9,32 +9,16 @@ app.controller('indexController', ['$scope', '$http', '$window', function($scope
             $('.loading-cover').css('display', 'block');
             console.log("start post!");
 
-            var URLs = "../model/postTeamName.php";//this one
-            var request = $.ajax({
-                url: URLs,
-                data: {
-                    name: $scope.teamName
-                },
-                type: "post",
-                dataType: "json",//回傳資料用json檔
-                success: function (data) {
-                    console.log(data);
-                       alert("oh yes~");
-                },
-                error: function (err) {
-                    alert(err.responseText);
-                }
-            });
-            /*
+
             var request = $http({
                 method: "post",
                 url: "../model/postTeamName.php",
-                data: {
+                params: {
                     name: $scope.teamName
                 },
                 headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }
             });
-*/
+
             request.success(function (data) {
                 $window.sessionStorage.tName = $scope.teamName;
                 $window.sessionStorage.tNum = data;
