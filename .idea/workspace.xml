@@ -25,7 +25,7 @@
       <file leaf-file-name="mapAll.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/javascripts/mapAll.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="133">
               <caret line="40" column="61" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="61" />
               <folding />
             </state>
@@ -55,8 +55,8 @@
       <file leaf-file-name="controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="342">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -282,12 +282,12 @@
       <workItem from="1483702047541" duration="2324000" />
       <workItem from="1483718095743" duration="1985000" />
       <workItem from="1483940990514" duration="12177000" />
-      <workItem from="1484276200536" duration="473000" />
+      <workItem from="1484276200536" duration="876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31253000" />
+    <option name="totallyTimeSpent" value="31656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -649,22 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/getAllTeam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/javascripts/mapAll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="40" column="61" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/prepare.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -673,10 +657,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/content/javascripts/mapAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="40" column="61" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/getAllTeam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="342">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
           <folding />
         </state>
       </provider>

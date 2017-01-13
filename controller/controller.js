@@ -10,7 +10,7 @@ app.controller('indexController', ['$scope', '$http', '$window', function($scope
             console.log("start post!");
 
             var URLs = "../model/postTeamName.php";//this one
-            $.ajax({
+            var request = $.ajax({
                 url: URLs,
                 data: {
                     name: $scope.teamName
