@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mapAll.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mapAll.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/content/javascripts/mapAll.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="40" column="61" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="61" />
+            <state relative-caret-position="266">
+              <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -35,8 +35,8 @@
       <file leaf-file-name="postTeamName.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/postTeamName.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -45,9 +45,28 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="19">
               <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connectDB.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/connectDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+              <folding>
+                <marker date="1484297415698" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
+                <marker date="1484297415698" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
+                <marker date="1484297415698" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
+                <marker date="1484297415698" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
+                <marker date="1484297415698" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
+                <marker date="1484297415698" expanded="true" signature="1818:1921" ph="INSERT INTO Score... " />
+                <marker date="1484297415698" expanded="true" signature="2140:2224" ph="SELECT name Score" />
+                <marker date="1484297415698" expanded="true" signature="2433:2450" ph="DELETE FROM " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,7 +74,7 @@
       <file leaf-file-name="prepare.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/prepare.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="285">
               <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="92" />
               <folding />
             </state>
@@ -67,16 +86,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
               <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controller.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controller/controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,12 +110,12 @@
         <option value="$PROJECT_DIR$/views/global_map.html" />
         <option value="$PROJECT_DIR$/content/javascripts/gameover.js" />
         <option value="$PROJECT_DIR$/views/gameover.html" />
-        <option value="$PROJECT_DIR$/content/javascripts/mapAll.js" />
         <option value="$PROJECT_DIR$/model/connectDB.php" />
         <option value="$PROJECT_DIR$/model/postTeamName.php" />
         <option value="$PROJECT_DIR$/views/prepare.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/controller/controller.js" />
+        <option value="$PROJECT_DIR$/content/javascripts/mapAll.js" />
       </list>
     </option>
   </component>
@@ -151,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -246,6 +254,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -303,15 +312,16 @@
       <workItem from="1483702047541" duration="2324000" />
       <workItem from="1483718095743" duration="1985000" />
       <workItem from="1483940990514" duration="12177000" />
-      <workItem from="1484276200536" duration="4876000" />
+      <workItem from="1484276200536" duration="10357000" />
+      <workItem from="1484295289442" duration="844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35656000" />
+    <option name="totallyTimeSpent" value="41981000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25184637" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -353,6 +363,71 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/content/javascripts/mapAll.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="61" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/postTeamName.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/connectDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484297415698" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
+            <marker date="1484297415698" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
+            <marker date="1484297415698" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
+            <marker date="1484297415698" expanded="true" signature="1818:1921" ph="INSERT INTO Score... " />
+            <marker date="1484297415698" expanded="true" signature="2140:2224" ph="SELECT name Score" />
+            <marker date="1484297415698" expanded="true" signature="2433:2450" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/prepare.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/getAllTeam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/javascripts/mapAll.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="931">
           <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
           <folding />
@@ -380,14 +455,14 @@
         <state relative-caret-position="722">
           <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
           <folding>
-            <marker date="1483948388770" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
-            <marker date="1483948388770" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
-            <marker date="1483948388770" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
-            <marker date="1483948388770" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
-            <marker date="1483948388770" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
-            <marker date="1483948388770" expanded="true" signature="1818:1920" ph="INSERT INTO Score... " />
-            <marker date="1483948388770" expanded="true" signature="2139:2223" ph="SELECT name Score" />
-            <marker date="1483948388770" expanded="true" signature="2432:2449" ph="DELETE FROM " />
+            <marker date="1484297415698" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
+            <marker date="1484297415698" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
+            <marker date="1484297415698" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
+            <marker date="1484297415698" expanded="true" signature="1818:1921" ph="INSERT INTO Score... " />
+            <marker date="1484297415698" expanded="true" signature="2140:2224" ph="SELECT name Score" />
+            <marker date="1484297415698" expanded="true" signature="2433:2450" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -421,14 +496,14 @@
         <state relative-caret-position="1102">
           <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
           <folding>
-            <marker date="1483948388770" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
-            <marker date="1483948388770" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
-            <marker date="1483948388770" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
-            <marker date="1483948388770" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
-            <marker date="1483948388770" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
-            <marker date="1483948388770" expanded="true" signature="1818:1920" ph="INSERT INTO Score... " />
-            <marker date="1483948388770" expanded="true" signature="2139:2223" ph="SELECT name Score" />
-            <marker date="1483948388770" expanded="true" signature="2432:2449" ph="DELETE FROM " />
+            <marker date="1484297415698" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
+            <marker date="1484297415698" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
+            <marker date="1484297415698" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
+            <marker date="1484297415698" expanded="true" signature="1818:1921" ph="INSERT INTO Score... " />
+            <marker date="1484297415698" expanded="true" signature="2140:2224" ph="SELECT name Score" />
+            <marker date="1484297415698" expanded="true" signature="2433:2450" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -460,7 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -492,14 +566,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483948388770" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
-            <marker date="1483948388770" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
-            <marker date="1483948388770" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
-            <marker date="1483948388770" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
-            <marker date="1483948388770" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
-            <marker date="1483948388770" expanded="true" signature="1818:1920" ph="INSERT INTO Score... " />
-            <marker date="1483948388770" expanded="true" signature="2139:2223" ph="SELECT name Score" />
-            <marker date="1483948388770" expanded="true" signature="2432:2449" ph="DELETE FROM " />
+            <marker date="1484297415698" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
+            <marker date="1484297415698" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
+            <marker date="1484297415698" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
+            <marker date="1484297415698" expanded="true" signature="1818:1921" ph="INSERT INTO Score... " />
+            <marker date="1484297415698" expanded="true" signature="2140:2224" ph="SELECT name Score" />
+            <marker date="1484297415698" expanded="true" signature="2433:2450" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -531,7 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -562,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,56 +713,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/javascripts/mapAll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="40" column="61" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/postTeamName.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/prepare.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="285">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="92" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/connectDB.php">
+    <entry file="file://$PROJECT_DIR$/controller/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-          <folding>
-            <marker date="1483948388770" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
-            <marker date="1483948388770" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
-            <marker date="1483948388770" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
-            <marker date="1483948388770" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
-            <marker date="1483948388770" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
-            <marker date="1483948388770" expanded="true" signature="1818:1920" ph="INSERT INTO Score... " />
-            <marker date="1483948388770" expanded="true" signature="2139:2223" ph="SELECT name Score" />
-            <marker date="1483948388770" expanded="true" signature="2432:2449" ph="DELETE FROM " />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -702,10 +740,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/controller.js">
+    <entry file="file://$PROJECT_DIR$/model/postTeamName.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="152">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/connectDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+          <folding>
+            <marker date="1484297415698" expanded="true" signature="743:789" ph="SELECT * FRO... Monopoly" />
+            <marker date="1484297415698" expanded="true" signature="988:996" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="988:1023" ph="SELECT * FRO... Score" />
+            <marker date="1484297415698" expanded="true" signature="1330:1428" ph="UPDATE Score... " />
+            <marker date="1484297415698" expanded="true" signature="1617:1643" ph="SELECT count... Score" />
+            <marker date="1484297415698" expanded="true" signature="1818:1921" ph="INSERT INTO Score... " />
+            <marker date="1484297415698" expanded="true" signature="2140:2224" ph="SELECT name Score" />
+            <marker date="1484297415698" expanded="true" signature="2433:2450" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/javascripts/mapAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
           <folding />
         </state>
       </provider>
