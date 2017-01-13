@@ -16,7 +16,7 @@ app.controller('indexController', ['$scope', '$http', '$window', function($scope
                 data: {
                     name: $scope.teamName
                 },
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'; 'charset':'Big5'}
             });
 
             request.success(function (data) {
