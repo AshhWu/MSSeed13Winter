@@ -46,7 +46,8 @@
     display: none;
     color: white;
     margin-top: 20px;
-    line-height: 70px; }
+    line-height: 70px;
+    font-size: 40px; }
     @media (min-width: 1400px) {
       .qa-container .response-box {
         font-size: 50px; } }
