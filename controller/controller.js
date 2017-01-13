@@ -13,9 +13,9 @@ app.controller('indexController', ['$scope', '$http', '$window', function($scope
             var request = $http({
                 method: "post",
                 url: "../model/postTeamName.php",
-                params: {
+                data: $.param({
                     name: $scope.teamName
-                },
+                }),
                 headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }
             });
 
