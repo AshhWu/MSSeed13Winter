@@ -122,10 +122,28 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
 			var gameClock = getTime(clock.toFixed(0));
             if (gameFinished) {
 				$window.sessionStorage.time = gameClock;
+                var request = $http({
+                    method: "post",
+                    url: "../model/updateTime.php",
+                    data: {
+                        team: $window.sessionStorage.tNum,
+                        ftime: gameClock;
+                    },
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                });
 				$window.sessionStorage.score = $scope.score;
 				window.location.href="arrive.html";
 			}else if(clock.toFixed(0) >= 1200){
 				$window.sessionStorage.time = gameClock;
+                var request = $http({
+                    method: "post",
+                    url: "../model/updateTime.php",
+                    data: {
+                        team: $window.sessionStorage.tNum,
+                        ftime: gameClock;
+                    },
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                });
 				$window.sessionStorage.score = $scope.score;
 				window.location.href="gameover.html";
 			}else{

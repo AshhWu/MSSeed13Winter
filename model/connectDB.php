@@ -48,6 +48,14 @@ require_once ("config.php");
                 $stmt -> execute();
             }
         public
+            function updateTime($team, $ftime){
+                $sql = "UPDATE Score
+                        SET score='$score'
+                        WHERE time='$ftime'";
+                $stmt = $this->pdo->prepare($sql);
+                $stmt -> execute();
+            }
+        public
             function postTeamName($name){
                 $pre_sql = "SELECT count(*) FROM Score";
                 $stmt = $this->pdo->prepare($pre_sql);
