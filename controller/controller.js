@@ -136,7 +136,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     console.log("Time Updated!")
                 });
 				$window.sessionStorage.score = $scope.score;
-				//window.location.href="arrive.html";
+				window.location.href="arrive.html";
 			}else if(clock.toFixed(0) >= 1200){
 				$window.sessionStorage.time = gameClock;
                 var request = $http({
@@ -144,7 +144,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     url: "../model/updateTime.php",
                     data: {
                         team: $window.sessionStorage.tNum,
-                        ftime: gameClock
+                        ftime: String(gameClock)
                     },
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                 });
@@ -350,7 +350,7 @@ function move(count)
                 break;
             case 2:
                 $scope.cxt.drawImage(imgMain,0,0,256,256,380,65,50,50);
-
+                gameFinished = true;
                 break;
             case 3:
                 $scope.cxt.drawImage(imgMain,0,0,256,256,380,140,50,50);
@@ -358,7 +358,7 @@ function move(count)
                 break;
             case 4:
                 $scope.cxt.drawImage(imgMain,0,0,256,256,335,115,50,50);
-                gameFinished = true;
+
                 break;
             case 5:
                 $scope.cxt.drawImage(imgMain,0,0,256,256,325,160,50,50);
