@@ -122,7 +122,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
 			var gameClock = getTime(clock.toFixed(0));
             if (gameFinished) {
 				$window.sessionStorage.time = gameClock;
-                console.log(gameClock);
+                console.log(String(gameClock));
                 var request = $http({
                     method: "post",
                     url: "../model/updateTime.php",
