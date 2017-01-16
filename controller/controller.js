@@ -127,7 +127,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     url: "../model/updateTime.php",
                     data: {
                         team: $window.sessionStorage.tNum,
-                        ftime: gameClock
+                        ftime: 10
                     },
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                 });
