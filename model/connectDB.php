@@ -50,8 +50,8 @@ require_once ("config.php");
         public
             function updateTime($team, $ftime){
                 $sql = "UPDATE Score
-                        SET score='$score'
-                        WHERE time='$ftime'";
+                        SET time='$ftime'
+                        WHERE team='$team'";
                 $stmt = $this->pdo->prepare($sql);
                 $stmt -> execute();
             }

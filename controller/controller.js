@@ -354,7 +354,7 @@ function move(count)
                 break;
             case 4:
                 $scope.cxt.drawImage(imgMain,0,0,256,256,335,115,50,50);
-                
+                gameFinished = true;
                 break;
             case 5:
                 $scope.cxt.drawImage(imgMain,0,0,256,256,325,160,50,50);
@@ -460,7 +460,7 @@ function move(count)
                 break;
             case 30:
                 $scope.cxt.drawImage(imgMain,0,0,256,256,461,40,50,50);
-                gameFinished = true;
+                //gameFinished = true;
                 break;
             case 31:
                 count=30;
