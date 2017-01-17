@@ -46,9 +46,9 @@ app.controller('gameoverController', ['$scope', '$http', '$window', function($sc
 	$scope.time = $window.sessionStorage.time;
 }]);
 app.controller('rankController', ['$scope', '$http', '$window', function($scope, $http, $window){
-    $scope.name[] = [];
-    $scope.score[] = [];
-    $scope.ftime[] = []
+    $scope.name = [];
+    $scope.score = [];
+    $scope.ftime = [];
     $(function(){
         var URLs = "../model/getRank.php";//this one
         return $.ajax({
