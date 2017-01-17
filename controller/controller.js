@@ -50,13 +50,13 @@ app.controller('rankController', ['$scope', '$http', '$window', function($scope,
     $scope.score = [];
     $scope.ftime = [];
     $http.get('../model/getRank.php')
-        .then(function(data){
+        .then(function(response){
             console.log("Get Rank Success!");
             for(var i=0;i<5;i++)
             {
-                $scope.name[i] = data[i]['name'];
-                $scope.score[i] = parseInt(data[i]['score']);
-                $scope.ftime[i] = getTime(data[i]['time']);
+                $scope.name[i] = response.data[i]['name'];
+                $scope.score[i] = parseInt(response.data[i]['score']);
+                $scope.ftime[i] = getTime(response.data[i]['time']);
             }
         });
 }]);
