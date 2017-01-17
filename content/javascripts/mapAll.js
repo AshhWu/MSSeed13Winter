@@ -31,7 +31,9 @@ window.onload=function()
 
     setInterval(function(){getTeamAndScore();}, 5000);
 };
-
+function seeResult() {
+    window.location.href="rank.html";
+}
 
 function getTeamAndScore() {
     var URLs = "../../model/getAllCarAndScore.php";//this one

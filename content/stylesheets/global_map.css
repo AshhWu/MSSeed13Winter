@@ -31,5 +31,13 @@
     color: white;
     font-size: 26px;
     font-weight: bold; }
+  .info-container .result {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+    color: white; }
 
 /*# sourceMappingURL=global_map.css.map */
