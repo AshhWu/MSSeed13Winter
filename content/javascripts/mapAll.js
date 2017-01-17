@@ -48,6 +48,11 @@ function getTeamAndScore() {
                 team[i]=data[i]['name'];
                 count[i]=parseInt(data[i]['score']);
             }
+            imgMain[0].src="../images/car1.png";
+            imgMain[1].src="../images/car2.png";
+            imgMain[2].src="../images/car3.png";
+            imgMain[3].src="../images/car4.png";
+            imgMain[4].src="../images/car5.png";
 
             countNum();
 
