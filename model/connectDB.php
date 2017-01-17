@@ -38,7 +38,14 @@ require_once ("config.php");
                 $teamData= $stmt->fetchAll(PDO::FETCH_ASSOC);
              return $teamData;//用$dataArray格式會錯誤
             }
-
+        public
+            function getRank(){
+                $sql = "SELECT * FROM Score ORDER BY 'time', 'score' DESC";
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute(array());
+                $teamData= $stmt->fetchAll(PDO::FETCH_ASSOC);
+             return $teamData;//用$dataArray格式會錯誤
+            }
         public
             function updateScore($team, $score){
                 $sql = "UPDATE Score

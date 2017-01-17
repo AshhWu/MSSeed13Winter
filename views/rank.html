@@ -13,14 +13,62 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../content/stylesheets/global.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../content/stylesheets/global_map.css" />
-    <script src="../content/javascripts/mapAll.js"></script>
-    <link rel="stylesheet" href="../content/stylesheets/mapAllStyle.css"/>
+    <link rel="stylesheet" href="../content/stylesheets/rank.css" />
 </head>
-<body>
-    <div class="col-lg-12 main-container">
-
-        
+<body ng-controller="rankController">
+    <div class="header-container" >
+        <div class="header-title">
+            微。跡<img class="header-logo" src="../images/taiwan.png" hspace="10">
+        </div>
     </div>
+    <div class="col-lg-12 main-container">
+        <div class="num-1">
+            <div class="team-name">
+                {{name[0]}}
+            </div>
+            <div class="num-1-bar">
+                <div class="num">1</div>
+                <div class="detail">
+                    <div class="score">
+                        Score：{{score[0]}}
+                    </div>
+                    <div class="ftime">
+                        Time：{{time[0]}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="num-2">
+            <div class="detail">
+            </div>
+            <div class="num-2-bar">
+                <div class="num">2</div>
+            </div>
+        </div>
+        <div class="num-3">
+            <div class="detail">
+            </div>
+            <div class="num-3-bar">
+                <div class="num">3</div>
+            </div>
+        </div>
+        <div class="num-4">
+            <div class="detail">
+            </div>
+            <div class="num-4-bar">
+                <div class="num">4</div>
+            </div>
+        </div>
+        <div class="num-5">
+            <div class="detail">
+            </div>
+            <div class="num-5-bar">
+                <div class="num">5</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="../controller/controller.js"></script>
 </body>
 </html>

@@ -45,6 +45,33 @@ app.controller('gameoverController', ['$scope', '$http', '$window', function($sc
 	$scope.score = $window.sessionStorage.score;
 	$scope.time = $window.sessionStorage.time;
 }]);
+app.controller('rankController', ['$scope', '$http', '$window', function($scope, $http, $window){
+    $scope.name = [];
+    $scope.score = [];
+    $scope.ftime = []
+    $(function(){
+        var URLs = "../model/getRank.php";//this one
+        return $.ajax({
+            url: URLs,
+            data: null,
+            type: "post",
+            dataType: "json",//回傳資料用json檔
+            success: function (data) {
+                console.log(data);
+                for(var i=0;i<5;i++)
+                {
+                    $scope.name[i] = data[i]['name'];
+                    $scope.score[i] = parseInt(data[i]['score']);
+                    $scope.ftime[i] = getTime(data[i]['time']);
+                }
+
+            },
+            error: function (err) {
+                console.log(err.responseText);
+            }
+        });
+    });
+}]);
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
     $scope.challenge = "突發事件";
@@ -143,7 +170,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     url: "../model/updateTime.php",
                     data: {
                         team: $window.sessionStorage.tNum,
-                        ftime: clock.toFixed(0)
+                        ftime: 1200
                     },
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                 });

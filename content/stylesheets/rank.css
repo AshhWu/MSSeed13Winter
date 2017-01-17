@@ -1,0 +1,65 @@
+.header-container {
+  color: white; }
+
+.team-name {
+  font-size: 25px;
+  font-weight: bold; }
+
+.num {
+  color: #329fa2;
+  text-align: center;
+  font-size: 45px; }
+
+.detail {
+  left: 10px;
+  position: absolute;
+  bottom: 20px;
+  color: #329fa2;
+  font-size: 20px; }
+
+.num-1 {
+  position: absolute;
+  bottom: 0;
+  left: 100px; }
+  .num-1 .num-1-bar {
+    height: 450px;
+    width: 150px;
+    background-color: white; }
+
+.num-2 {
+  position: absolute;
+  bottom: 0;
+  left: 350px; }
+  .num-2 .num-2-bar {
+    height: 400px;
+    width: 150px;
+    background-color: white; }
+
+.num-3 {
+  position: absolute;
+  bottom: 0;
+  left: 600px; }
+  .num-3 .num-3-bar {
+    height: 350px;
+    width: 150px;
+    background-color: white; }
+
+.num-4 {
+  position: absolute;
+  bottom: 0;
+  left: 850px; }
+  .num-4 .num-4-bar {
+    height: 300px;
+    width: 150px;
+    background-color: white; }
+
+.num-5 {
+  position: absolute;
+  bottom: 0;
+  left: 1100px; }
+  .num-5 .num-5-bar {
+    height: 250px;
+    width: 150px;
+    background-color: white; }
+
+/*# sourceMappingURL=rank.css.map */
