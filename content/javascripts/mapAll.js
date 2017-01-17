@@ -922,6 +922,7 @@ function countNum()
 
     for(var i=0;i<5;i++)
     {
+        document.getElementById("talkBox").innerHTML="";
         document.getElementById("talkBox").innerHTML+=team[i]+": "+count[i]+"<br>";
     }
 }
