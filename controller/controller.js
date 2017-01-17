@@ -49,18 +49,16 @@ app.controller('rankController', ['$scope', '$http', '$window', function($scope,
     $scope.name = [];
     $scope.score = [];
     $scope.ftime = [];
-    $(function(){
-        $http.get('../model/getRank.php')
-            .then(function(data){
-                console.log("Get Rank Success!");
-                for(var i=0;i<5;i++)
-                {
-                    $scope.name[i] = data[i]['name'];
-                    $scope.score[i] = parseInt(data[i]['score']);
-                    $scope.ftime[i] = getTime(data[i]['time']);
-                }
-            });
-    });
+    $http.get('../model/getRank.php')
+        .then(function(data){
+            console.log("Get Rank Success!");
+            for(var i=0;i<5;i++)
+            {
+                $scope.name[i] = data[i]['name'];
+                $scope.score[i] = parseInt(data[i]['score']);
+                $scope.ftime[i] = getTime(data[i]['time']);
+            }
+        });
 }]);
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
