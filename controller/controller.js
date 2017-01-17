@@ -50,26 +50,16 @@ app.controller('rankController', ['$scope', '$http', '$window', function($scope,
     $scope.score = [];
     $scope.ftime = [];
     $(function(){
-        var URLs = "../model/getRank.php";//this one
-        return $.ajax({
-            url: URLs,
-            data: null,
-            type: "post",
-            dataType: "json",//回傳資料用json檔
-            success: function (data) {
-                console.log(data);
+        $http.get('../model/getRank.php')
+            .then(function(response){
+                console.log("Get Rank Success!");
                 for(var i=0;i<5;i++)
                 {
                     $scope.name[i] = data[i]['name'];
                     $scope.score[i] = parseInt(data[i]['score']);
                     $scope.ftime[i] = getTime(data[i]['time']);
                 }
-
-            },
-            error: function (err) {
-                console.log(err.responseText);
-            }
-        });
+            });
     });
 }]);
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
