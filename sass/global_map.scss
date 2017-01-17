@@ -41,11 +41,12 @@
     }
     .result {
         position: absolute;
-        bottom: 30px;
-        right: 20px;
+        bottom: 0px;
+        right: 25px;
         font-size: 24px;
         border: none;
         background-color: transparent;
         color: white;
+        outline: 0;
     }
 }
