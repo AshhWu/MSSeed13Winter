@@ -4,7 +4,6 @@ var currentImgMainX,currentImgMainY;
 var imgMain = new Array(5);
 var count = new Array(5);
 var team = new Array(5);
-var listTeam = new Array(5);
 
 window.onload=function()
 {
@@ -895,16 +894,12 @@ function countNum()
     for(var i=0;i<5;i++)
     {
         var temp,t;
-
+        temp=i;
         for(var j=i+1;j<5;j++)
         {
             if(count[i]<count[j])
             {
                 temp = j;
-            }
-            else
-            {
-                temp = i;
             }
         }
         t=count[i];
@@ -920,9 +915,9 @@ function countNum()
         team[temp]=t;
     }
 
+    document.getElementById("talkBox").innerHTML="";
     for(var i=0;i<5;i++)
     {
-        document.getElementById("talkBox").innerHTML="";
         document.getElementById("talkBox").innerHTML+=team[i]+": "+count[i]+"<br>";
     }
 }
