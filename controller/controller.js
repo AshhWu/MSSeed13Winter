@@ -59,6 +59,13 @@ app.controller('rankController', ['$scope', '$http', '$window', function($scope,
                 $scope.ftime[i] = getTime(response.data[i]['time']);
             }
         });
+    function getTime(s){
+		var mins = (s/60).toFixed(0);
+		if(mins<10){mins = '0'+mins;}
+		var secs = (s%60).toFixed(0);
+		if(secs<10){secs = '0'+secs;}
+		return mins+":"+secs;
+    }
 }]);
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
