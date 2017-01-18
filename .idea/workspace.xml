@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prepare.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="prepare.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/prepare.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+            <state relative-caret-position="361">
+              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arrive.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="arrive.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/arrive.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+            <state relative-caret-position="361">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,9 +95,9 @@
         <option value="$PROJECT_DIR$/controller/controller.js" />
         <option value="$PROJECT_DIR$/model/connectDB.php" />
         <option value="$PROJECT_DIR$/content/javascripts/mapAll.js" />
-        <option value="$PROJECT_DIR$/views/arrive.html" />
-        <option value="$PROJECT_DIR$/views/gameover.html" />
         <option value="$PROJECT_DIR$/views/prepare.html" />
+        <option value="$PROJECT_DIR$/views/gameover.html" />
+        <option value="$PROJECT_DIR$/views/arrive.html" />
       </list>
     </option>
   </component>
@@ -310,15 +310,15 @@
       <workItem from="1484276200536" duration="10357000" />
       <workItem from="1484295289442" duration="1731000" />
       <workItem from="1484618948451" duration="12180000" />
-      <workItem from="1484750771898" duration="328000" />
+      <workItem from="1484750771898" duration="938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55376000" />
+    <option name="totallyTimeSpent" value="55986000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1370" height="744" extended-state="0" />
+    <frame x="-8" y="0" width="1370" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25184637" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -766,10 +766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/arrive.html">
+    <entry file="file://$PROJECT_DIR$/views/prepare.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        <state relative-caret-position="361">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -782,10 +782,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/prepare.html">
+    <entry file="file://$PROJECT_DIR$/views/arrive.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+        <state relative-caret-position="361">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
