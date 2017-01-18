@@ -157,7 +157,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     console.log("Time Updated!")
                 });
 				$window.sessionStorage.score = $scope.score;
-				window.location.href="arrive.html";
+				window.location.href="gameover.html";
 			}else if(clock.toFixed(0) >= 1200){
 				$window.sessionStorage.time = gameClock;
                 var request = $http({

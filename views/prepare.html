@@ -16,47 +16,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
         function waiting (){
-            $('.loading-cover').css('display', 'block');
-			var wsServer = 'ws://140.112.106.188:3000';
-			var socket = new WebSocket(wsServer);
-			socket.onopen = function (evt) { onOpen(evt) };
-			socket.onclose = function (evt) { onClose(evt) };
-			socket.onmessage = function (evt) { onMessage(evt) };
-			socket.onerror = function (evt) { onError(evt) };
-            // setTimeout(function(){
-                // window.location.assign("game.html");
-            // }, 2000);
+            window.location.href = "game.html";
         }
-		function onOpen(evt) {
-			console.log("socket connected succssful!");
-			isConnect = true;
-		}
-		function onClose(evt) {
-			console.log("Disconnected");
-		}
-		function onMessage(evt) {
-			var data = JSON.parse(evt.data);
-			switch (data.type) {
-				case 'text':
-					window.location.assign("game.html");
-					console.log(data.msg);
-					break;
-				case 'num' :
-					console.log(data.msg);
-					break;
-			}
-
-			console.log('Retrieved data from server: ' + evt.data);
-		}
-		function onError(evt) {
-			//console.log('Error occured: ' + evt.data);
-		}
-		function sendMsg() {
-			if(isConnect){
-				ws.send($('input').value);
-				$('input').value = '';
-			}
-		}
     </script>
 </head>
 <body ng-controller="prepareController">
