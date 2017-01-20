@@ -21,46 +21,46 @@
 .num-1 {
   position: absolute;
   bottom: 0;
-  left: 100px; }
+  left: 300px; }
   .num-1 .num-1-bar {
-    height: 450px;
-    width: 150px;
+    height: 650px;
+    width: 250px;
     background-color: white; }
 
 .num-2 {
   position: absolute;
   bottom: 0;
-  left: 350px; }
+  left: 600px; }
   .num-2 .num-2-bar {
-    height: 400px;
-    width: 150px;
+    height: 550px;
+    width: 250px;
     background-color: white; }
 
 .num-3 {
   position: absolute;
   bottom: 0;
-  left: 600px; }
+  left: 900px; }
   .num-3 .num-3-bar {
-    height: 350px;
-    width: 150px;
+    height: 450px;
+    width: 250px;
     background-color: white; }
 
 .num-4 {
   position: absolute;
   bottom: 0;
-  left: 850px; }
+  left: 1200px; }
   .num-4 .num-4-bar {
-    height: 300px;
-    width: 150px;
+    height: 350px;
+    width: 250px;
     background-color: white; }
 
 .num-5 {
   position: absolute;
   bottom: 0;
-  left: 1100px; }
+  left: 1500px; }
   .num-5 .num-5-bar {
     height: 250px;
-    width: 150px;
+    width: 250px;
     background-color: white; }
 
 /*# sourceMappingURL=rank.css.map */
