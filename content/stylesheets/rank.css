@@ -2,21 +2,21 @@
   color: white; }
 
 .team-name {
-  font-size: 25px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center; }
 
 .num {
   color: #329fa2;
   text-align: center;
-  font-size: 45px; }
+  font-size: 50px; }
 
 .detail {
   left: 10px;
   position: absolute;
   bottom: 20px;
   color: #329fa2;
-  font-size: 20px; }
+  font-size: 30px; }
 
 .num-1 {
   position: absolute;
