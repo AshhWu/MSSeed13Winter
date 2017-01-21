@@ -155,9 +155,9 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                 });
                 request.success(function () {
                     console.log("Time Updated!")
+                    $window.sessionStorage.score = $scope.score;
+    				window.location.href="arrive.html";
                 });
-				$window.sessionStorage.score = $scope.score;
-				window.location.href="arrive.html";
 			}else if(clock.toFixed(0) >= 1200){
 				$window.sessionStorage.time = gameClock;
                 var request = $http({
@@ -169,8 +169,11 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     },
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                 });
-				$window.sessionStorage.score = $scope.score;
-				window.location.href="gameover.html";
+                request.success(function () {
+                    console.log("Time Updated!")
+                    $window.sessionStorage.score = $scope.score;
+    				window.location.href="gameover.html";
+                });
 			}else{
 				$('#clock').html(gameClock);
 			}
@@ -312,7 +315,7 @@ var c;
 var currentImgMainX,currentImgMainY;
 var img,imgMain;
 
-window.onload=function()
+/*window.onload=function()
 {
     c=document.getElementById("myCanvas");
     $scope.cxt=c.getContext("2d");
@@ -325,8 +328,19 @@ window.onload=function()
     {
         $scope.cxt.drawImage(imgMain,0,0,256,256,461,40,50,50);
     };
-};
+};*/
 $(function(){
+    c=document.getElementById("myCanvas");
+    $scope.cxt=c.getContext("2d");
+    //主角
+    imgMain=new Image();
+    imgMain.src="../images/car"+ $window.sessionStorage.tNum + ".png";
+    currentImgMainX=461;
+    currentImgMainY=30;
+    imgMain.onload=function()
+    {
+        $scope.cxt.drawImage(imgMain,0,0,256,256,461,40,50,50);
+    };
     $('.loading-title').addClass('animated slideInLeft');
     $('.loading-title').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
         $(this).removeClass('animated');
