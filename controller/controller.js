@@ -1,7 +1,7 @@
 var app = angular.module('app', []);
 var timer;
 var gameClock;
-var gameFinished = false; //set this to true let game.html locate to gameover page
+
 app.controller('indexController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = "";
     $scope.postTeamName = function(){
@@ -139,10 +139,10 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
     function gameTimer(){
 		startTime = new Date();
 		var clock=0;
-		setInterval(function() {
+		$scope.gameFinishCheck = setInterval(function() {
 			var clock = (new Date()-startTime)/1000;
 			var gameClock = getTime(clock.toFixed(0));
-            if (gameFinished) {
+            if ($scope.score >= 30) {
 				$window.sessionStorage.time = gameClock;
                 var request = $http({
                     method: "post",
@@ -154,6 +154,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                 });
                 request.success(function () {
+                    clearInterval($scope.gameFinishCheck);
                     console.log("Time Updated!")
                     $window.sessionStorage.score = $scope.score;
     				window.location.href="arrive.html";
@@ -499,7 +500,7 @@ function move(count)
                 break;
             case 30:
                 $scope.cxt.drawImage(imgMain,0,0,256,256,461,40,50,50);
-                gameFinished = true;
+
                 break;
             case 31:
                 count=30;
