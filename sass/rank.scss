@@ -2,14 +2,14 @@
     color: white;
 }
 .team-name {
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
 }
 .num {
     color: #329fa2;
     text-align: center;
-    font-size: 50px;
+    font-size: 45px;
 
 }
 .detail {
@@ -17,55 +17,55 @@
     position: absolute;
     bottom: 20px;
     color: #329fa2;
-    font-size: 30px;
+    font-size: 20px;
 }
 .num-1 {
     position: absolute;
     bottom: 0;
-    left: 300px;
+    left: 100px;
     .num-1-bar {
-        height: 650px;
-        width: 250px;
+        height: 450px;
+        width: 150px;
         background-color: white;
     }
 }
 .num-2 {
     position: absolute;
     bottom: 0;
-    left: 600px;
+    left: 350px;
     .num-2-bar {
-        height: 550px;
-        width: 250px;
+        height: 400px;
+        width: 150px;
         background-color: white;
     }
 }
 .num-3 {
     position: absolute;
     bottom: 0;
-    left: 900px;
+    left: 600px;
     .num-3-bar {
-        height: 450px;
-        width: 250px;
+        height: 350px;
+        width: 150px;
         background-color: white;
     }
 }
 .num-4 {
     position: absolute;
     bottom: 0;
-    left: 1200px;
+    left: 850px;
     .num-4-bar {
-        height: 350px;
-        width: 250px;
+        height: 300px;
+        width: 150px;
         background-color: white;
     }
 }
 .num-5 {
     position: absolute;
     bottom: 0;
-    left: 1500px;
+    left: 1100px;
     .num-5-bar {
         height: 250px;
-        width: 250px;
+        width: 150px;
         background-color: white;
     }
 }
