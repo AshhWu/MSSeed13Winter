@@ -142,7 +142,23 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
 		$scope.gameFinishCheck = setInterval(function() {
 			var clock = (new Date()-startTime)/1000;
 			var gameClock = getTime(clock.toFixed(0));
-            if ($scope.score >= 30) {
+            if(clock.toFixed(0) >= 1200){
+				$window.sessionStorage.time = gameClock;
+                var request = $http({
+                    method: "post",
+                    url: "../model/updateTime.php",
+                    data: {
+                        team: $window.sessionStorage.tNum,
+                        ftime: 1200
+                    },
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                });
+                request.success(function () {
+                    console.log("Time Updated!")
+                    $window.sessionStorage.score = $scope.score;
+    				window.location.href="gameover.html";
+                });
+			}else if ($scope.score >= 30) {
 				$window.sessionStorage.time = gameClock;
                 var request = $http({
                     method: "post",
@@ -158,22 +174,6 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     console.log("Time Updated!")
                     $window.sessionStorage.score = $scope.score;
     				window.location.href="arrive.html";
-                });
-			}else if(clock.toFixed(0) >= 1200){
-				$window.sessionStorage.time = gameClock;
-                var request = $http({
-                    method: "post",
-                    url: "../model/updateTime.php",
-                    data: {
-                        team: $window.sessionStorage.tNum,
-                        ftime: 1200
-                    },
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-                });
-                request.success(function () {
-                    console.log("Time Updated!")
-                    $window.sessionStorage.score = $scope.score;
-    				window.location.href="gameover.html";
                 });
 			}else{
 				$('#clock').html(gameClock);
