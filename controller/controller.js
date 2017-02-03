@@ -158,7 +158,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
                     $window.sessionStorage.score = $scope.score;
     				window.location.href="gameover.html";
                 });
-			}else if ($scope.score >= 30) {
+			}else if ($scope.score >= 30 || $scope.index >= 68) {
 				$window.sessionStorage.time = gameClock;
                 var request = $http({
                     method: "post",
