@@ -70,7 +70,7 @@ app.controller('rankController', ['$scope', '$http', '$window', function($scope,
 app.controller('gameController', ['$scope', '$http', '$window', function($scope, $http, $window){
     $scope.teamName = $window.sessionStorage.tName;
     $scope.challenge = "突發事件";
-    $scope.password_a = ["----.", "....-", "..---", "--", "..."];
+    $scope.password_a = [".-..", "..-", "...-", "--", "..."];
     $scope.password = "";
     $scope.chIndex = -1;
     $scope.questions = [];
