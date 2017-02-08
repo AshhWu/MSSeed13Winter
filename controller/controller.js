@@ -181,7 +181,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         }, 1000);
 	}
 	function getTime(s){
-		var mins = (s/60).toFixed(0);
+		var mins = (s/60);
 		if(mins<10){mins = '0'+mins;}
 		var secs = (s%60).toFixed(0);
 		if(secs<10){secs = '0'+secs;}
