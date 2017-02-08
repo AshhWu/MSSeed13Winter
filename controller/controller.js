@@ -60,9 +60,9 @@ app.controller('rankController', ['$scope', '$http', '$window', function($scope,
             }
         });
     function getTime(s){
-		var mins = (s/60);
+		var mins = Math.floor(s/60);
 		if(mins<10){mins = '0'+mins;}
-		var secs = (s%60).toFixed(0);
+		var secs = (s%60);
 		if(secs<10){secs = '0'+secs;}
 		return mins+":"+secs;
     }
@@ -181,7 +181,7 @@ app.controller('gameController', ['$scope', '$http', '$window', function($scope,
         }, 1000);
 	}
 	function getTime(s){
-		var mins = (s/60).toFixed(0);
+		var mins = Math.floor(s/60);
 		if(mins<10){mins = '0'+mins;}
 		var secs = (s%60).toFixed(0);
 		if(secs<10){secs = '0'+secs;}
